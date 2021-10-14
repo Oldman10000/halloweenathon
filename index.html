@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PageFlipper</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+  <script src="assets/js/flipper.js"></script>
+  <script src="assets/js/script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <button type="button" class="btn-prev">Previous page</button>
+      [<span class="page-current">1</span> of <span class="page-total">-</span>]
+      <button type="button" class="btn-next">Next page</button>
+    </div>
+
+    <div>
+      State: <i class="page-state">read</i>, orientation: <i class="page-orientation">landscape</i>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="flip-book" id="demoBookExample">
+      <div class="page page-cover page-cover-top" data-density="hard">
+        <div class="cover-content">
+          <div>
+            <h2>Spooky House of Horrors!</h2>
+            <h3>Do you dare enter...?</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- First section -->
+
+      <div class="page bloody">
+        <div class="page-content">
+          <h2 class="page-header">Welcome To the House of Horror</h2>
+          <div class="page-text">
+            <h2 style="text-align: center; font-size: 4rem;">Image Here???</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="page bloody">
+        <div class="page-content">
+          <h2 class="page-header">Welcome To the House of Horror</h2>
+          <div class="page-text">
+            <p>You are standing outside a spooky haunted house</p>
+            <p>Do you want to go in?</p>
+            <div class="buttons">
+              <button class="enter">
+                <p>Enter...</p>
+              </button>
+              <button class="death">
+                <p>Run away and cry :(</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second section -->
+
+      <div class="page bloody">
+        <div class="page-content">
+          <h2 class="page-header">Entrance Hall</h2>
+          <div class="page-text">
+            <h2 style="text-align: center; font-size: 4rem;">Image Here???</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="page bloody">
+        <div class="page-content">
+          <h2 class="page-header">Entrance Hall</h2>
+          <div class="page-text">
+            <p>You enter the building into a large and creaky hallway...</p>
+            <p>There are three doors, one to your right, one to your left and one straight ahead.</p>
+            <p>Which door do you open?</p>
+            <div class="buttons">
+              <button class="room1">
+                <p>Door 1</p>
+              </button>
+              <button class="room2">
+                <p>Door 2</p>
+              </button>
+              <button class="room3">
+                <p>Door 3</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room 1 section -->
+
+      <div class="page bloody">
+        <div class="page-content">
+          <h2 class="page-header">Room 1</h2>
+          <div class="page-text">
+            <h2 style="text-align: center; font-size: 4rem;">Image Here???</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="page bloody">
+        <div class="page-content">
+          <h2 class="page-header">Room 1</h2>
+          <div class="page-text">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta aliquid nostrum porro eos, eligendi
+              aliquam suscipit adipisci iste cupiditate doloribus. Atque, harum explicabo? Placeat, repellendus.</p>
+            <div class="buttons">
+              <button>
+                <p>Does X</p>
+              </button>
+              <button>
+                <p>Does Y</p>
+              </button>
+              <button>
+                <p>Does Z</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room 2 section -->
+
+      <div class="page bloody">
+        <div class="page-content">
+          <h2 class="page-header">Room 2</h2>
+          <div class="page-text">
+            <h2 style="text-align: center; font-size: 4rem;">Image Here???</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="page bloody">
+        <div class="page-content">
+          <h2 class="page-header">Room 2</h2>
+          <div class="page-text">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta aliquid nostrum porro eos, eligendi
+              aliquam suscipit adipisci iste cupiditate doloribus. Atque, harum explicabo? Placeat, repellendus.</p>
+            <div class="buttons">
+              <button>
+                <p>Does X</p>
+              </button>
+              <button>
+                <p>Does Y</p>
+              </button>
+              <button>
+                <p>Does Z</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room 3 section -->
+
+      <div class="page bloody">
+        <div class="page-content">
+          <h2 class="page-header">Room 3</h2>
+          <div class="page-text">
+            <h2 style="text-align: center; font-size: 4rem;">Image Here???</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="page bloody">
+        <div class="page-content">
+          <h2 class="page-header">Room 3</h2>
+          <div class="page-text">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta aliquid nostrum porro eos, eligendi
+              aliquam suscipit adipisci iste cupiditate doloribus. Atque, harum explicabo? Placeat, repellendus.</p>
+            <div class="buttons">
+              <button>
+                <p>Does X</p>
+              </button>
+              <button>
+                <p>Does Y</p>
+              </button>
+              <button>
+                <p>Does Z</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page page-cover page-cover-bottom" data-density="hard">
+        <div class="page-content">
+          <h2>YOU HAVE ESCAPED!!!!</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
