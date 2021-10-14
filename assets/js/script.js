@@ -6,6 +6,7 @@ fetch("./stories.json")
   .then((data) => {
     console.log(data);
     data.forEach((story) => {
+      console.log(story.storyName)
       const allStoriesList = document.createElement("li");
 
       allStoriesList.innerHTML = story.storyName;

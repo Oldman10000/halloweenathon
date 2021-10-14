@@ -8,12 +8,21 @@
   <title>PageFlipper</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
-  <script src="assets/js/flipper.js"></script>
-  <script src="assets/js/script.js"></script>
 </head>
 
 <body>
   <div class="container">
+
+    <h2>All Stories</h2>
+    <ul id="allStories">
+
+    </ul>
+    ​
+    <h2>Picked out a random story from the data:</h2>
+    <h3 id="storyTitle"></h3>
+
+    <hr>
+
     <div>
       <button type="button" class="btn-prev">Previous page</button>
       [<span class="page-current">1</span> of <span class="page-total">-</span>]
@@ -202,6 +211,8 @@
     </div>
   </div>
 
+  <script src="assets/js/flipper.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
