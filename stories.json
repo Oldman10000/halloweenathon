@@ -1,0 +1,168 @@
+{
+  "storyName": "Haunted House",
+  "storyParts": {
+    "hall": {
+      "name": "Hall",
+      "slide": 2,
+      "page1": [
+        "It’s getting dark.",
+        "And I’m starting to regret agreeing to meet a friend from school I haven’t seen or heard from in 15 years. Every thing will be alright though. We used to do everything together. Then we left school and they dropped off the face of the Earth. Fast forward to 3 weeks ago when they emailed me an invitation to attend their house out in the sticks. Why didn’t I just ignore it.",
+        "It’s around 9PM in the middle of winter and I’m late, as always. I’m driving my old sedan through the woods humming along to the tunes on the radio. The road is winding and narrow, lined either side by trees with a dense fog falling reducing visibility to a few cars’ lengths. Not much further to go I think to myself as I turn off the fog lights.",
+        "The radio flicks between static and pop songs. I look down and press the buttons on the radio to change the station, but they all seem to have bad signal. Never mind I think as my eyes return to the road.",
+        "Two people are in the middle of the road. I’m going to crash right into them. I pull the steering wheel with all my might, praying that I won’t hit them.",
+        "It’s too late."
+      ],
+      "page2": [
+        "The car slams into the person on the right-hand side and they roll up onto the bonnet and smash the windscreen. “Oh shit” I shout as I take my hands off the steering wheel and cover my face. The car slides off the road and crashes straight into a tree. I blackout.",
+        "“I’m not dead” is all I think as I open my eyes are slowly absorb what’s happened.",
+        "“Wait, where am I”. I sit up and feel a sharp jolt of pain down my right side and in my jaw. I wipe my mouth on my sleeve and see the deep claret stain I know only too well is blood. I’m in some sort of dimly lit entrance hall with an open plan staircase directly in front of me. On both the left and right hand side are large dark wooden doors set between wall mounted gas lamps and old dusty paintings of people I did not recognise.",
+        "I turn around and see large double doors which I assume must be the front door. I reach out and grab the large brass doorhandle and turn it. Locked. I’ll have to find another way out."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Staircase",
+          "nextSlide": 4
+        },
+        "option2": {
+          "decision": "Left Door",
+          "nextSlide": 8
+        },
+        "option3": {
+          "decision": "Right Door",
+          "nextSlide": 6
+        }
+      }
+    },
+    "landing": {
+      "name": "Landing",
+      "slide": 4,
+      "page2": [
+        "I decide the best thing to do is to go up the stairs in front of me and see if I can see out of a window as to where the hell I am. I slowly move up the stairs one step at a time, each step creaking and threatening to break with every movement. I manage to get to the top safely and find myself on a landing that curves around the edge of the entrance hall.",
+        "There is a door directly in front of me with a plaque on the front which reads “guest”. I turn around and see there is another door on the left of the landing. When I look to the right, I’m staring straight at a door frame. It feels like something is watching me from within. I squint to try and see better. The door slams shut. I grip hold of the banister as a cold fear runs across my body."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Guest Door",
+          "nextSlide": 26
+        },
+        "option2": {
+          "decision": "Left Door",
+          "nextSlide": 28
+        },
+        "option3": {
+          "decision": "Right Door",
+          "nextSlide": 30
+        }
+      }
+    },
+    "corridorRight": {
+      "name": "Right Corridor",
+      "slide": 6,
+      "page2": [
+        "I go through the door and find myself in a dark corridor running perpendicularly with red wallpaper and wooden floors, faintly lit by gas lamps. There is a large window to my right. I try to open it, but it’s locked and pitch-black outside.",
+        "The corridor has two doors off to the right and then proceeds round to the left. The doors are made from a dark wood and have bronze handles. I can feel a breeze and hear the whistling of the wind coming from under the first door. "
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Dining Room Door",
+          "nextSlide": 10
+        },
+        "option2": {
+          "decision": "Kitchen Door",
+          "nextSlide": 12
+        },
+        "option3": {
+          "decision": "Continue Along Corridor",
+          "nextSlide": 22
+        }
+      }
+    },
+    "corridorLeft": {
+      "name": "Left Corridor",
+      "slide": 6,
+      "page2": [
+        "I go through the door and find myself in a dark corridor running perpendicularly with red wallpaper and wooden floors, faintly lit by gas lamps. There is a large window to my left. I try to open it, but it’s locked and pitch-black outside.",
+        "The corridor has two doors off to the left and then proceeds round to the right. The doors are made from a dark wood and have bronze handles. The second door is slightly ajar, and I can hear a faint whimpering through it."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Lounge",
+          "nextSlide": 18
+        },
+        "option2": {
+          "decision": "Study",
+          "nextSlide": 20
+        },
+        "option3": {
+          "decision": "Continue Along Corridor",
+          "nextSlide": 22
+        }
+      }
+    },
+    "diningRoom": {
+      "name": "Dining Room",
+      "slide": 10,
+      "page2": [
+        "I grab hold of the door handle and turn and it opens inwards. I find myself in some sort of dining room. There is a table in the middle of the room with two places set. There are windows on the left and opposite wall and a door on the right.",
+        "I move around the table to try to windows but again they are locked. I look back to the table and feel a cold shiver run down my spine as I notice that there is place name in front of one of the seats. My name. I need to get out of here as soon as possible."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Side Door",
+          "nextSlide": 12
+        },
+        "option2": {
+          "decision": "Back To Corridor",
+          "nextSlide": 22
+        }
+      }
+    },
+    "kitchen": {
+      "name": "Kitchen",
+      "slide": 12,
+      "page2": [
+        "I rush into the room and realise that the faint whimpering I heard earlier is louder and from behind a door in the far corner. I take a moment to consider where I am and realised, I was in the kitchen. There are pots and pans all over the surfaces; all of which looked like they had never been cleaned",
+        "Next to the door in the corner is a window. I rush to it to try and open it but again have no luck. I feel a cold liquid on my feet like I have stepped in a puddle and look down to see my right foot is in what appears to be a pool of blood. The blood seemed to be coming from behind the door."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Small Bathroom",
+          "nextSlide": 14
+        }
+      }
+    },
+    "toilet": {
+      "name": "Toilet",
+      "slide": 14,
+      "page2": [
+        "I nervously push open the corner door and find myself in a small bathroom. I gasp as I notice the entire floor is covered in blood. Opposite me is a half length mirror above a scaly sink with one of the taps dripping. To the left is a toilet covered in scum but it’s a dead end.",
+        "There’s nothing else here and the only way out is the way I came. The whimpering I could hear in the previous room is gone and I realize my mind must have been playing tricks on me."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Return to previous room",
+          "nextSlide": 16
+        }
+      }
+    },
+    "kitchenDeath": {
+      "name": "You ARE DEAD",
+      "slide": 16,
+      "page2": ["Demon Girl Pops Up", "You are DEAD!!! RIP"],
+      "jumpscare": true,
+      "userOptions": {
+        "option1": {
+          "decision": "Return to beginning",
+          "nextSlide": 2
+        }
+      }
+    }
+  }
+}
