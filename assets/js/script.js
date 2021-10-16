@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return buttons
           .map((button) => {
+            console.log(button);
             return `<button class="slide${Object.values(button[1])[1]}">${
               Object.values(button[1])[0]
             }</button>`;
@@ -127,13 +128,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // allows user to flip to chosen page using the classname
       for (let i = 1; i < pageCount; i++) {
-        if (document.querySelector(`.slide${i}`)){
-          document.querySelector(`.slide${i}`).addEventListener("click", () => {
-            pageFlip.flip(i);
-          });
+        if (document.querySelector(`.slide${i}`)) {
+          document.querySelectorAll(`.slide${i}`).forEach((button) =>
+            button.addEventListener("click", () => {
+              console.log(i);
+              pageFlip.flip(i);
+            })
+          );
         }
       }
-
     })
     .catch((err) => console.log(err)); // error
 
