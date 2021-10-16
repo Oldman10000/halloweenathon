@@ -46,14 +46,20 @@ p {
 
 .page.page-cover h2 {
   font-size: 3em;
+  font-family: 'Creepster', cursive;
 }
 
 .page.page-cover h3 {
   font-size: 2em;
+  font-family: 'Creepster', cursive;
 }
 
 .page .page-content .page-header {
   text-transform: uppercase;
+  font-family: 'Creepster', cursive;
+  font-size: 2.5em;
+  letter-spacing: 3px;
+  text-shadow: -4px 3px rgb(59, 29, 29);
   text-align: center;
   color: black;
 }
@@ -73,8 +79,8 @@ p {
 .page-text > p {
   font-size: 1.25em;
   text-align: center;
-  text-shadow:1px 1px rgb(110, 91, 91);
   padding: 0 25px;
+  font-weight: bolder;
 }
 
 .buttons {
@@ -83,6 +89,12 @@ p {
 
 .buttons button {
   padding: 5px 20px;
+  margin: 0 3px 0 3px;
+  border-radius: 0.5vh;
+  border: none;
+  background-color: rgb(144,114,59);
+  box-shadow: -3px 3px rgb(59, 29, 29);
+  font-weight: bold;
 }
 
 .buttons p {
@@ -102,7 +114,9 @@ p {
 
 .page.page-cover.page-cover-top {
   background-image: url("../img/red-cover.jpg");
-  box-shadow: inset 0px 0 30px 0px rgba(36, 10, 3, 0.5), -2px 0 5px 2px rgba(0, 0, 0, 0.4);
+  background-repeat: no-repeat;
+  background-attachment:local;
+  background-size: cover;
 }
 
 .page.bloody {
@@ -135,5 +149,9 @@ p {
 
 #book {
     grid-area: book;
-    margin-left: 10%;
+    /* margin-left: 10%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
