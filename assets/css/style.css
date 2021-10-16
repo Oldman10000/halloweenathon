@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
-* {
-  font-family: 'Creepster', cursive;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
 .flip-book {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
   display: none;
   background-size: cover;
+}
+
+p {
+  font-family: 'ZCOOL KuaiLe', cursive;
 }
 
 .page {
@@ -56,13 +57,14 @@
   padding-top: 10px;
   box-sizing: border-box;
   border-top: solid 1px #f4e8d7;
-  color: green;
+  color: black;
 }
 
 .page-text > p {
-  font-size: 2em;
+  font-size: 1.25em;
   text-align: center;
-  text-shadow:2px 2px rgb(255, 255, 255);
+  text-shadow:1px 1px rgb(255, 255, 255);
+  padding: 0 25px;
 }
 
 .buttons {
@@ -94,7 +96,7 @@
 }
 
 .page.bloody {
-  background-image: url("../img/paper.jpg");
+  /* background-image: url("../img/paper.jpg"); */
 }
 
 .page {
