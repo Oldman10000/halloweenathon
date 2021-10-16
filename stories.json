@@ -82,7 +82,7 @@
     },
     "corridorLeft": {
       "name": "Left Corridor",
-      "slide": 6,
+      "slide": 8,
       "page2": [
         "I go through the door and find myself in a dark corridor running perpendicularly with red wallpaper and wooden floors, faintly lit by gas lamps. There is a large window to my left. I try to open it, but it’s locked and pitch-black outside.",
         "The corridor has two doors off to the left and then proceeds round to the right. The doors are made from a dark wood and have bronze handles. The second door is slightly ajar, and I can hear a faint whimpering through it."
@@ -149,6 +149,90 @@
         "option1": {
           "decision": "Return to previous room",
           "nextSlide": 16
+        }
+      }
+    },
+    "lounge": {
+      "name": "Lounge",
+      "slide": 18,
+      "page2": [
+        "I slowly open the door and look inside what appears to be a lounge with an old CRT tv set in the opposite corner playing static and a couple of big arm chairs in front of the tv with their back to me. There were animals head set upon all of the walls. I felt incredibly uneasy as the eyes of all the elk, bull, bear and other animals all seemed to be looking directly at me.",
+        "Then I noticed it. There was a big old sliding window behind the tv set with thick dusty curtains half open. The window was open and the curtains were moving with the breeze. My heart started thumping as I made my way towards the window. I’m finally getting out of here.", 
+        "I froze in my spot and slowly turned back to see a grizzled and misshapen man asleep in the left armchair. He was wearing dungarees and a baseball cap and had his one eye closed. The other was missing entirely and was an empty socket. On his waistband is a big iron key. I was about 3 metres from the window and the same from him."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Do I attempt to take the key? Hard puzzle!",
+          "nextSlide": 16
+        },
+        "option2": {
+          "decision": "Do I tiptoe to the window and try and climb out?",
+          "nextSlide": 23
+        },
+        "option3": {
+          "decision": "Do I tiptoe back out of the room? Puzzle ",
+          "nextSlide": 16
+        }
+      }
+    },
+    "study": {
+      "name": "Study",
+      "slide": 20,
+      "page2": [
+        "I push the door open and go inside. It appears to be some kind of study with book shelves along all four walls and a desk in the middle of the room with a chair behind. “Wait a second” I think. I can use the chair to smash through a window. Buoyed by this idea, I move towards the chair. Its a wooden framed desk chair with a cushion sewn on. I grab it with both hands and try and lift it but it won’t move.",
+        "I try with all my might but I cannot move the chair even slightly. I look at it bemused trying to work out what is holding it down but there appears to be nothing. I try one last time and put both of my hand on the back of the chair and heave. Nothing. All of a sudden the books shelves behind me start shaking. I turn and look at them and they start shaking even more.", 
+        "From the middle shelf an arm starts to come from between two of the books and reaches towards me. I stumble backwards and fall over the chair. I get up and run towards the door."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Puzzle/game",
+          "nextSlide": 50
+        },
+        "option2": {
+          "decision": "Fail and die",
+          "nextSlide": 16
+        }
+      }
+    },
+    "basementCorridor": {
+      "name": "Basement Corridor",
+      "slide": 20,
+      "page2": [
+        "I move to the end of the corridor and follow it around the bend. I can see the corridor continues around the other side of the house. However halfway down the corridor is a sheet metal door which a large catch. It looks as if it might lead to a basement."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Go to corridor left",
+          "nextSlide": 8
+        },
+        "option2": {
+          "decision": "Go to corridor right",
+          "nextSlide": 6
+        },
+        "option3": {
+          "decision": "Basement",
+          "nextSlide": 7
+        }
+      }
+    },
+    "basement1": {
+      "name": "Basement",
+      "slide": 25,
+      "page2": [
+        "I use all my strength to open the large metal door and slip inside. I’m faced with wooden steps leading down into a basement. There’s a large gap between the first step and the next step with the ones in between all broken. There’s a flickering light at the bottom of the stairs but its virtually impossible to see."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Continue forward?",
+          "nextSlide": 27
+        },
+        "option2": {
+          "decision": "Retrace steps?",
+          "nextSlide": 20
         }
       }
     },
