@@ -160,3 +160,24 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/*------------ spider animation ------------- */
+.spider-animation {
+  position: absolute;
+}
+
+.spider-animation .spider1 {
+  transform: translateY(-300px);
+  width: 50px;
+  position: absolute;
+  left: 450px;
+  top: 150px;
+}
+
+.spider-animation .thread1 {
+  transform: translateY(-300px);
+  width: 2px;
+  position: absolute;
+  left: 474px;
+  top: -400px;
+}
