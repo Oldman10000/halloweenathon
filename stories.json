@@ -236,6 +236,112 @@
         }
       }
     },
+    "basement2": {
+      "name": "Basement",
+      "slide": 27,
+      "page2": [
+        "I put one foot on the top step and apply a little bit of pressure to test whether it will break. A few prods and it feels fine. I walk forward onto the first step and instantly it snaps and I’m falling forward. I put my arms out and smash into the ground and can hear my left wrist snap. I bite my lip so hard trying not to scream that it starts bleeding.",
+        " stagger to my feet and look around. I can barely see anything but there are 2 lamps which are illuminating a couple of areas. The first appears to be some kind of cage. I step closing to it and see that it’s around 3 foot tall and 6 feet wide but it’s empty. The other area I can see appears to be some kind of trap door with a large metal padlock attached. I go to the padlock and try and force it off but its too strong.. There must be a key somewhere but how am I going to get out of here.",
+        "Something growls in the dark and I turn and see you bright orange eyes staring at me from the darkness."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "(If possessed) Use key to escape under pressure",
+          "nextSlide": 50
+        },
+        "option2": {
+          "decision": "Die",
+          "nextSlide": 16
+        }
+      }
+    },
+    "guestRoom": {
+      "name": "Guest Room",
+      "slide": 26,
+      "page2": [
+        "I push into the room with the “guest” sign on the front. Surely there must be a window to jump out of or something up here. The “guest” room is bare except for a single chair sitting in the middle of the room. The chair is made from metal and is bolted to the floor. Behind the chair is a window that has metal bars across it.",
+        "A massive thud in the back of my head and I gasp and fall forwards, eyes rolling into the back of my head.  Through hazy eyes on the floor, I see a man standing over me and I pass out. This is the end.",
+        "My eyes jolt open and I’m panting hard as if I’ve just been pulled out of an icy lake seconds before drowning. “Where’s that man?”- I think to myself. It suddenly dawns on me that I am no longer lying on the floor but instead I’m sitting in the metal seat. My left wrist is secured to the chair by a steel clasp as is my neck. I pull at both, but neither will move.",
+        "A bright red light appears in front of me. I cover my eyes with my right hand as they acclimatise. A few seconds later, I realise it’s not just a light but a large timer which reads 5:00. And then it starts counting down. 4:59, 4:58, 4:57. “What the hell does this mean” I think. I start to panic. 4:50, 4:49, 4:48. I pull at the braces again but nothing. I look around the room frantically. And then I see it. Has it always been there? A large cleaver sits on a small side table to my right. Next to it a note with the words.",
+        "“To leave, you must leave”.",
+        "What the hell does that mean. I pick up the cleaver and start banging at the clasp holding my left wrist. Nothing is working. 4:02, 4:01, 4:00. “Arghhhh” I explain as the next clasp tightens and starts to constrict my breathing."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Try and break the clasp with the cleaver",
+          "nextSlide": 50
+        },
+        "option2": {
+          "decision": "Do nothing",
+          "nextSlide": 16
+        },
+        "option3": {
+          "decision": "Cut off left hand – take cleaver",
+          "nextSlide": 50
+        }
+      }
+    },
+    "bedroom1": {
+      "name": "Bedroom",
+      "slide": 29,
+      "page2": [
+        "I slowly push open the door that I’ve just seen slam shut. Why do I choose to go this way. No way. Is that my old friend? I peak through a crack in the door and can see a middle aged women with long straight brown hair sitting in front of a dressing table. She’s wearing a long white and wore out dress and is looking into the mirror brushing her hair. I open the door a little wider to get a better view. It’s definitely my friend but what the hell are they doing in this house. I need to get out.",
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Go into the bedroom and speak to your old friend",
+          "nextSlide": 32
+        },
+        "option2": {
+          "decision": "Do nothing",
+          "nextSlide": 4
+        }
+      }
+    },
+    "bedroom2": {
+      "name": "Bedroom",
+      "slide": 33,
+      "page2": [
+        "I open the door gradually and find myself in a huge bedroom. There’s a dusty bed with dark brown bedding in the centre of the room with a closet opposite and a chest of draws in the corner. Across the bed on the opposite side of the room are double doors with glass panes leading out onto a balcony.",
+        "I run to the doors. They’re open. I swing one back and take a step forward and I feel someone grab the back of my clothes and pull me back in. It’s the grizzled one-eyed man wearing dungarees with patches of hair on his head."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "(If with cleaver) Fight",
+          "nextSlide": 33
+        },
+        "option2": {
+          "decision": "Run",
+          "nextSlide": 33
+        },
+        "option3": {
+          "decision": "Fight without cleaver ",
+          "nextSlide": 16
+        }
+      }
+    },
+    "bedroomWithFriend": {
+      "name": "Bedroom with Friend",
+      "slide": 32,
+      "page2": [
+        "I take one step into the room and she stops brushing her hair. Her head starts turning to the right and keeps rotating all the way to look at me on the left. Her eyes are pitch black. He mouth appears to fall 3 inches and she vanishes. I turn to run but she’s standing in front of me, her hand is pushed into my chest and I’m bleeding heavily."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Go into the bedroom and speak to your old friend",
+          "nextSlide": 32
+        },
+        "option2": {
+          "decision": "Do nothing",
+          "nextSlide": 4
+        }
+      }
+    },
     "kitchenDeath": {
       "name": "You ARE DEAD",
       "slide": 16,
