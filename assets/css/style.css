@@ -83,8 +83,13 @@ p {
   font-weight: bolder;
 }
 
+button {
+  cursor: pointer;
+}
+
 .buttons {
   text-align: center;
+  z-index: 1;
 }
 
 .buttons button {
