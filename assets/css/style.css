@@ -137,3 +137,18 @@ p {
     grid-area: book;
     margin-left: 10%;
 }
+
+
+
+/* Puzzle */
+.hoveredBorders {
+  background-color: black;
+}
+
+.empty {
+  background-color: blue;
+}
+
+.hovered {
+  background-color: purple;
+}

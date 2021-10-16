@@ -174,7 +174,8 @@
           "decision": "Do I tiptoe back out of the room? Puzzle ",
           "nextSlide": 16
         }
-      }
+      },
+      "puzzleImages": ["./assets/img/puzzle-img/key1.jpeg","./assets/img/puzzle-img/key2.jpeg", "./assets/img/puzzle-img/key3.jpeg"]
     },
     "study": {
       "name": "Study",
