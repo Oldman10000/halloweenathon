@@ -139,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (document.querySelector(`.slide${i}`)) {
           document.querySelectorAll(`.slide${i}`).forEach((button) =>
             button.addEventListener("click", () => {
+              runDiceGame(i);
               console.log(i);
               pageFlip.flip(i);
             })
@@ -153,7 +154,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // dice game will run one click of certain buttons. 
 function runDiceGame(i) {
-  if (i == 50) {
+  console.log(i, "diceing");
+  if (i == "50") {
     diceRoll(i, 10, 4);
     console.log(i, "dice");
   }
@@ -164,10 +166,8 @@ function diceRoll(i, total, odds) {
   let roll = Math.floor(Math.random() * total) + 1;
   console.log(roll)
   if (roll > odds) {
-    pageFlip.flip(4)
+    i = 4;
   } if (roll < odds) {
-    pageFlip.flip(16)
-  } else {
-    pageflip.flip(i)
-  }
+    i = 16;
+  } 
 };
