@@ -161,7 +161,8 @@ button {
     transform: translate(-50%, -50%);
 }
 
-/*------------ spider animation ------------- */
+/*------------ animations ------------- */
+/*spider animation  */
 .spider-animation {
   position: absolute;
 }
@@ -181,3 +182,33 @@ button {
   left: 474px;
   top: -400px;
 }
+
+/* skeleton animation */
+.skeleton-animation {
+ opacity: 0; 
+}
+
+.skeleton-animation .skeleton-head {
+  position: absolute;
+  width: 26px;
+  left: 86px;
+  top: 415px;
+}
+
+.skeleton-animation .skeleton-body {
+  position: absolute;
+  width: 140px;
+  left: 10px;
+  top: 400px;
+}
+
+/* ghost animation */
+.ghost-animation .ghost {
+  opacity: 0;
+  position: absolute;
+  width: 100px;
+  right: 10px;
+  top: 100px;
+}
+
+/*------------ end animations ------------- */
