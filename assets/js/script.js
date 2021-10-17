@@ -149,13 +149,12 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((err) => console.log(err)); // error
 
-  // load pages
-});
-
-// dice game will run one click of certain buttons. 
+    // dice game will run one click of certain buttons. 
 function runDiceGame(i) {
   console.log(i, "diceing");
-  if (i == "50") {
+  if (i !== 50) {
+    pageFlip.flip(i)
+  } if (i = 50) {
     diceRoll(i, 10, 4);
     console.log(i, "dice");
   }
@@ -166,8 +165,14 @@ function diceRoll(i, total, odds) {
   let roll = Math.floor(Math.random() * total) + 1;
   console.log(roll)
   if (roll > odds) {
-    i = 4;
+    pageFlip.flip(4);
   } if (roll < odds) {
-    i = 16;
+    pageFlip.flip(16);
   } 
 };
+
+  // load pages
+});
+
+
+
