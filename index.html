@@ -24,22 +24,30 @@
     <div>
       State: <i class="page-state">read</i>, orientation: <i class="page-orientation">landscape</i>
     </div>
+
+    <div class="music">
+      <p class="sound_text">Make it creepy</p>
+      <img id="icon" src="assets\img\play.png" alt="">
+    </div>
+
+    <audio id="creepy_sound" src="assets/sound/sound.mp3"></audio>
   </div>
-<div class="grid">
-  <div id="book" class="container">
-    <div class="flip-book" id="horrorBook">
-      <div class="page page-cover page-cover-top" data-density="hard">
-        <div class="cover-content">
-          <div>
-            <h2></h2>
-            <h3>Do you dare enter...?</h3>
+  <div class="grid">
+    <div id="book" class="container">
+      <div class="flip-book" id="horrorBook">
+        <div class="page page-cover page-cover-top" data-density="hard">
+          <div class="cover-content">
+            <div>
+              <h2></h2>
+              <h3 class="subheading">Do you dare enter...?</h3>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/sound.js"></script>
 </body>
 
 </html>

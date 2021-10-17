@@ -168,13 +168,11 @@ button {
 
 }
 #icon:hover {
-  background: white;
-  box-shadow: 0 0 100px white;
   cursor: pointer;
 }
 
 .subheading {
-  width: 20ch;
+  width: 17ch;
     animation: typing 4s steps(20), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
