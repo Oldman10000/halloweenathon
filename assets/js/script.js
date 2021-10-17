@@ -140,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.querySelectorAll(`.slide${i}`).forEach((button) =>
             button.addEventListener("click", () => {
               console.log(i);
+              runDiceGame()
               pageFlip.flip(i);
             })
           );
@@ -150,3 +151,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // load pages
 });
+
+// dice game will run one click of certain buttons. 
+function runDiceGame() {
+  let success = true;
+  if (this.innerText = "Try and break the clasp with the cleaver") {
+    diceroll(10, 4)
+    if (success) {
+      //do somthing i cant figure out to move to correct page
+    } else if (success = false) {
+      //do somthing i cant figure out to move to correct page
+    }
+  }
+}
+// run a dice roll based of variables added to function
+function diceRoll(total, odds) {
+  let roll = math.floor(math.random() * total) + 1;
+  if (roll > odds) {
+    success = true
+  } else {
+    success = false
+  }
+};
