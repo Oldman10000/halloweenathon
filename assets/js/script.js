@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function runDiceGame() {
   let success = true;
   if (this.innerText = "Try and break the clasp with the cleaver") {
-    diceroll(10, 4)
+    diceRoll(10, 4)
     if (success) {
       //do somthing i cant figure out to move to correct page
     } else if (success = false) {
@@ -166,7 +166,7 @@ function runDiceGame() {
 }
 // run a dice roll based of variables added to function
 function diceRoll(total, odds) {
-  let roll = math.floor(math.random() * total) + 1;
+  let roll = Math.floor(Math.random() * total) + 1;
   if (roll > odds) {
     success = true
   } else {
