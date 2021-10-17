@@ -22,15 +22,12 @@ fetch("./stories.json")
                             <div class="fill" draggable="true" style=" width: 100%; height: 100%; background-image: url('${img}'); background-size: cover;background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
                         </div>
                     `
-
-
                 })
             }
         });
 
         const emptyBoxes = document.querySelectorAll('.img-box-container');
         const fill = document.querySelectorAll('.fill');
-
 
         // Drag functions
         const dragStart = () => {
@@ -56,21 +53,28 @@ fetch("./stories.json")
             console.log("leave")
         }
 
-        const dragDrop = () => {
-            this.className  = 'empty';
-            console.log("drop")
-        }
+        const holdingImg = []    
         fill.forEach(filled => {
-            filled.addEventListener('dragstart', dragStart);
-            filled.addEventListener('dragend', dragEnd);
+            filled.addEventListener('dragstart', () => {
+                holdingImg.push(filled.style.backgroundImage);
+                // console.log(holdingImg[0].style.backgroundImage)
+            });
+            filled.addEventListener('dragend', () => holdingImg.pop());
+
         });
         
+        
         for (const emptyBox of emptyBoxes) {
+            const dragDrop = () => {
+                console.log(holdingImg);
+                emptyBox.innerHTML = `
+                <div class="fill" draggable="true" style=" width: 100%; height: 100%; background-image: ${holdingImg[0]}; background-size: cover;background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+                `
+            }
+    
             emptyBox.addEventListener('dragover', dragOver);
             emptyBox.addEventListener('dragenter', dragEnter);
             emptyBox.addEventListener('dragleave', dragLeave);
             emptyBox.addEventListener('drop', dragDrop);
         }
-
-
     })
