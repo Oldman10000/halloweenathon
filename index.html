@@ -24,43 +24,53 @@
     <div>
       State: <i class="page-state">read</i>, orientation: <i class="page-orientation">landscape</i>
     </div>
+
+    <div class="music">
+      <p class="sound_text">Make it creepy</p>
+      <img id="icon" src="assets\img\play.png" alt="">
+    </div>
+
+    <audio id="creepy_sound" src="assets/sound/sound.mp3"></audio>
   </div>
-<div class="grid">
-  <div id="book" class="container">
-    <div class="flip-book" id="horrorBook">
-      <div class="page page-cover page-cover-top" data-density="hard">
-        <div class="cover-content">
-          <div>
-            <h2></h2>
-            <h3>Do you dare enter...?</h3>
+  <div class="grid">
+    <div id="book" class="container">
+      <div class="flip-book" id="horrorBook">
+        <div class="page page-cover page-cover-top" data-density="hard">
+          <div class="cover-content">
+            <div>
+              <h2></h2>
+              <h3 class="subheading">Do you dare enter...?</h3>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- ---------------- ANIMATIONS ----------- -->
-<!--animations spider-->
-  <div class="spider-animation">
-    <img class="spider1" src="assets/img/animation/spider-1.png" alt="Spider">  
-    <img class="thread1" src="assets/img/animation/longthread.png" alt="Spider thread"> 
   </div>
-<!--animations skeleton-->
+
+  <!-- ---------------- ANIMATIONS ----------- -->
+  <!--animations spider-->
+  <div class="spider-animation">
+    <img class="spider1" src="assets/img/animation/spider-1.png" alt="Spider">
+    <img class="thread1" src="assets/img/animation/longthread.png" alt="Spider thread">
+  </div>
+  <!--animations skeleton-->
   <div class="skeleton-animation">
-    <img class="skeleton-body" src="assets/img/animation/skeleton-body1.png" alt="skeleton body">  
-    <img class="skeleton-head" src="assets/img/animation/skeleton-head.png" alt="skeleton head"> 
+    <img class="skeleton-body" src="assets/img/animation/skeleton-body1.png" alt="skeleton body">
+    <img class="skeleton-head" src="assets/img/animation/skeleton-head.png" alt="skeleton head">
   </div>
   <!--animations ghost-->
   <div class="ghost-animation">
-    <img class="ghost" src="assets/img/animation/ghost.png" alt="ghost"> 
+    <img class="ghost" src="assets/img/animation/ghost.png" alt="ghost">
   </div>
 
-  <script src="assets/js/script.js"></script>
 
   <!-- Script for animation and GreenSock used for the animation-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
   <script src="assets/js/animation.js"></script>
+  <script src="assets/js/sound.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
