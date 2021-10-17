@@ -1,3 +1,67 @@
+//  animations
+// -----------Spider death ----------
+const bodySpider = document.querySelector('.body-spider')
+const leftLegs = document.querySelectorAll('.left-leg')
+const rightLegs = document.querySelectorAll('.right-leg')
+const babySpiders = document.querySelectorAll('.baby-spider')
+const allSpiderDeathAnimation = document.querySelector('.spider-death-animation')
+const blackBackground = document.querySelector('.black-background')
+const greyBackground = document.querySelector('.grey-background')
+const motherSpider = document.querySelector('.mother-spider')
+
+function spiderDeath() {
+
+    rightLegs.forEach(rightLeg => {
+        gsap.to(rightLeg, {rotation:20, yoyo: true,repeat: -1, duration:"random(0.5,3)"})
+    })
+    leftLegs.forEach(leftLeg => {
+        gsap.to(leftLeg, {rotation:-20, yoyo: true,repeat: -1, duration:"random(0.5,3)"})
+    })
+
+    babySpiders.forEach(babySpider => {
+        gsap.to(babySpider, {
+            y:"random(-400,400)",
+            x:"random(-400,400)",
+            duration:"random(1,4)",
+            opacity:1,
+            repeat:-1, 
+            repeatRefresh:true, 
+            delay:"random(1,6)"
+        })
+    })
+
+    const TL = gsap.timeline();
+   
+    TL
+    .to(allSpiderDeathAnimation, {display:'block', duration: 1,} )
+    .to(blackBackground, {opacity:0, duration: 4} )
+    .to(motherSpider, {duration: 2, scale:8, y:-1500})
+    .to(allSpiderDeathAnimation, {display:'none', duration: 1, delay:1} )
+}
+
+// -----------Scream death ----------
+const screamPicture = document.querySelector('.the-scream-picture')
+const screamAnimation = document.querySelector('.scream-animation')
+
+function screamDeath() {
+    gsap.to(screamAnimation, {display:'block', duration: 1})  
+    gsap.to(screamPicture, {duration: 3, scale:40, })   
+    gsap.to(screamAnimation, {display:'none', duration:1, delay:5} )
+}
+
+// -----------blood death ----------
+const handPicture = document.querySelector('.hand-blood-picture')
+const handAnimation = document.querySelector('.blood-animation')
+
+function bloodDeath() {
+    gsap.to(handAnimation, {display:'block', duration: 1}) 
+    gsap.to(handPicture, {duration: 5, opacity:0.2,delay:1})  
+    gsap.to(handPicture, {duration: 5, opacity:1,delay:5}) 
+    gsap.to(handAnimation, {display:'none', duration:1, delay:7} )
+}
+
+// ----end animations
+
 document.addEventListener("DOMContentLoaded", function () {
   // create new pageFlip class
   const pageFlip = new St.PageFlip(document.querySelector("#horrorBook"), {
@@ -139,8 +203,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (document.querySelector(`.slide${i}`)) {
           document.querySelectorAll(`.slide${i}`).forEach((button) =>
             button.addEventListener("click", () => {
-              console.log(i);
               pageFlip.flip(i);
+              if(i == 16) {
+                randomNumber = Math.floor(Math.random() * 3) + 1;
+                if(randomNumber == 1){spiderDeath()}
+                if(randomNumber == 2){screamDeath()}
+                if(randomNumber == 3){bloodDeath()}
+              }
             })
           );
         }

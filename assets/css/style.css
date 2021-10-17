@@ -206,7 +206,6 @@ button {
 .spider-animation {
   position: absolute;
 }
-
 .spider-animation .spider1 {
   transform: translateY(-300px);
   width: 50px;
@@ -214,7 +213,6 @@ button {
   left: 450px;
   top: 150px;
 }
-
 .spider-animation .thread1 {
   transform: translateY(-300px);
   width: 2px;
@@ -222,26 +220,22 @@ button {
   left: 474px;
   top: -400px;
 }
-
 /* skeleton animation */
 .skeleton-animation {
  opacity: 0; 
 }
-
 .skeleton-animation .skeleton-head {
   position: absolute;
   width: 26px;
   left: 86px;
   top: 415px;
 }
-
 .skeleton-animation .skeleton-body {
   position: absolute;
   width: 140px;
   left: 10px;
   top: 400px;
 }
-
 /* ghost animation */
 .ghost-animation .ghost {
   opacity: 0;
@@ -250,5 +244,122 @@ button {
   right: 10px;
   top: 100px;
 }
-
+/* ----Spide death -----*/
+.spider-death-animation {
+  display: none;
+}
+.black-background {
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.grey-background {
+  background-color: rgb(87, 84, 84);
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.body-spider {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  /*opacity: 0; */ 
+  width: 150px;
+  position: absolute;
+  top: 200px;
+}
+.leg {
+/*opacity: 0; */ 
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+width: 150px;
+position: absolute;
+top: 200px;
+}
+.left-leg:nth-child(1){
+  right: -150px;
+  top: 225px;
+}
+.left-leg:nth-child(2){
+  right: -150px;
+  top: 205px;
+}
+.left-leg:nth-child(3){
+  right: -150px;
+  top: 180px;
+}
+.right-leg:nth-child(1) {
+  left: -150px;
+  top: 225px;
+}
+.right-leg:nth-child(2){
+  left: -150px;
+  top: 205px;
+}
+.right-leg:nth-child(3){
+  left: -150px;
+  top: 180px;
+}
+.baby-spider {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 50px;
+  position: absolute;
+  top: 205px;
+}
+/* ----Scream death -----*/
+.scream-animation{
+  display: none;
+     /*display: none;*/
+}
+.the-scream-picture {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 50px;
+  position: absolute;
+  top: 0;
+}
+.background-scream{
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* ----blood  death -----*/
+.blood-animation {
+  display: none;
+     /*display: none;*/
+}
+.background-blood {
+  background-image: url("../img/animation/wall-background.jpg");
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hand-blood-picture {
+  opacity: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
 /*------------ end animations ------------- */

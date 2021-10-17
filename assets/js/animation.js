@@ -3,15 +3,14 @@ const spider1 = document.querySelector('.spider-animation .spider1')
 const thread1 = document.querySelector('.spider-animation .thread1')
 
 gsap.to(spider1, {keyframes:[
-    {y:0, rotation:180, duration: 4, ease:Elastic.easeOut, delay:60,},
+    {y:0, rotation:180, duration: 4, ease:Elastic.easeOut, delay:90,},
     {y:-300, delay:1, duration:6}
 ]}).repeat(-1)
 
 gsap.to(thread1, {keyframes:[
-    {y:0, duration: 4, ease:Elastic.easeOut, delay:60},
+    {y:0, duration: 4, ease:Elastic.easeOut, delay:90},
     {y:-300, delay:1, duration:6}
 ]}).repeat(-1)
-
 
 // -----------Skeleton animation ----------
 const skeletonBodyHead = document.querySelectorAll('.skeleton-animation')
@@ -28,7 +27,6 @@ tlSkeleton
 .to(skeletonHead,{duration: 4, y:100},'-=0.75')
 .to(skeletonBodyHead,{opacity:0, duration: 3},'<')
 
-
 // -----------Ghost animation ----------
 const ghost = document.querySelector('.ghost')
 
@@ -43,4 +41,5 @@ tlGhost
     {x:-600, opacity:0, duration:5, },
     {opacity:0, duration:30, }, 
 ]}).repeat(-1)
+
 
