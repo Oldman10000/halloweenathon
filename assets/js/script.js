@@ -35,7 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (story.page1) {
           return story.page1.map((p) => `<p>${p}</p>`).join("");
         } else {
-          return `<h2>Picture here??</h2>`;
+          return `
+              <div class="page-img" style="background: transparent url(assets/img/page_img/${story.slide}.png) center no-repeat;">
+              </div>
+          `;
         }
       }
 
@@ -44,7 +47,12 @@ document.addEventListener("DOMContentLoaded", function () {
         if (story.page2) {
           return story.page2.map((p) => `<p>${p}</p>`).join("");
         } else {
-          return `<h2>Picture here??</h2>`;
+          return `
+            <div class="page-img">
+              <img href="assets/img/page_img/${story.slide}.png">
+            </div>
+          </div>
+          `;
         }
       }
 
