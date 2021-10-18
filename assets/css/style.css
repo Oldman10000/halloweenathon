@@ -27,6 +27,7 @@ p {
 .page {
   padding: 20px;
   overflow: hidden;
+  overflow-y: visible;
 }
 
 .music {
@@ -396,6 +397,22 @@ top: 200px;
 
 .page.page-cover.page-cover-top {
   transform: translateX(-80%);
-  }
-  
+  } 
 }/*end responsiv max-width: 1200px */
+
+/*responsive height*/
+@media screen and (max-height: 620px) {
+  #book {
+    transform: translate(-50%, -40%);
+  }
+}
+@media screen and (max-height: 430px) {
+  #book {
+    transform: translate(-50%, -30%);
+  }
+}
+@media screen and (max-height: 200px) {
+  #book {
+    transform: translate(-50%, -15%);
+  }
+}
