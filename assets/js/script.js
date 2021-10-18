@@ -70,6 +70,15 @@ function bloodDeath() {
   gsap.to(handAnimation, { display: "none", duration: 1, delay: 7 });
 }
 
+// -----------win escape animation ----------
+const escapePicture = document.querySelector('.the-escape-picture')
+const escapeAnimation = document.querySelector('.escape-animation')
+
+function escape() {
+    gsap.to(escapeAnimation, {display:'block', duration: 1})  
+    gsap.to(escapePicture, {duration: 3, scale:15,y:300 })   
+    gsap.to(escapeAnimation, {display:'none', duration:1, delay:4} )
+}
 // ----end animations
 
 document.addEventListener("DOMContentLoaded", function () {
