@@ -101,10 +101,10 @@ A spooky sound track can be enabled by clicking the button in the top left.
 ### Languages Used:
 
  1. [HTML](https://en.wikipedia.org/wiki/HTML) 
- - Programming language providing content and structure of website.
+ - Markup language providing content and structure of website.
 
  2. [CSS](https://en.wikipedia.org/wiki/CSS) 
- - Programming language providing styling of website.
+ - Styling language providing website styles and appearance.
 
  3. [Javascript](https://en.wikipedia.org/wiki/Javascript)
  - Animations and logic through-out the website
@@ -142,3 +142,6 @@ A spooky sound track can be enabled by clicking the button in the top left.
 ## Bugs :cockroach:
 
 ## Credits
+
+- [StPageFlip JavaScript Library](https://github.com/Nodlik/StPageFlip) - created by [Nodlik](https://github.com/Nodlik) - Used for page flip animations
+- [Pexels.com](https://www.pexels.com/) - clipart style book images taken from various authors - specific credits not requested
