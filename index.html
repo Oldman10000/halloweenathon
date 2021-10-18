@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Halloweenathon</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
@@ -17,12 +17,17 @@
 <body>
   <div class="container">
 
+    <!-- background music -->
     <div class="music">
       <p class="sound_text no-display-medium-screen">Make it creepy</p>
       <img id="icon" src="assets\img\play.png" alt="">
     </div>
     <audio id="creepy_sound" src="assets/sound/sound.mp3"></audio>
 
+    <!-- extra SFX -->
+    <audio id="scream" src="assets/sound/scream.mp3"></audio>
+
+    <!-- allow manual page turning for development purposes -->
     <div class="to-hide">
       <div>
         <button type="button" class="btn-prev">Previous page</button>
@@ -35,6 +40,7 @@
     </div>
   </div>
 
+  <!-- main book section -->
   <div class="grid">
     <div id="book" class="container">
       <div class="flip-book" id="horrorBook">
@@ -104,11 +110,11 @@
     <img class="hand-blood-picture" src="assets/img/animation/crime-hand.jpg"
       alt="Picture of the shape of and hand with blood on a wall">
   </div>
-    <!-------   Escape win animation  ------->
-    <div class="escape-animation">
-      <div class="background-escape"></div>
-      <img class="the-escape-picture" src="assets/img/animation/forest-escape.jpg" alt="">  
-    </div>
+  <!-------   Escape win animation  ------->
+  <div class="escape-animation">
+    <div class="background-escape"></div>
+    <img class="the-escape-picture" src="assets/img/animation/forest-escape.jpg" alt="">
+  </div>
 
   <!--POP UP-->
   <!-- The Modal -->
