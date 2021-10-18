@@ -18,7 +18,6 @@
         "“Wait, where am I”. I sit up and feel a sharp jolt of pain down my right side and in my jaw. I wipe my mouth on my sleeve and see the deep claret stain I know only too well is blood. I’m in some sort of dimly lit entrance hall with an open plan staircase directly in front of me. On both the left and right hand side are large dark wooden doors set between wall mounted gas lamps and old dusty paintings of people I do recognise.",
         "I turn around and see large double doors which I assume must be the front door. I reach out and grab the large brass doorhandle and turn it. Locked and secure. It would take a battering ram to get through these. I’ll have to find another way out."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
           "decision": "Staircase",
@@ -41,7 +40,6 @@
         "I decide the best thing to do is to go up the stairs in front of me and see if I can see out of a window as to where the hell I am. I slowly move up the stairs one step at a time, each step creaking and threatening to break with every movement. I manage to get to the top safely and find myself on a landing that curves around the edge of the entrance hall.",
         "There is a door directly in front of me with a plaque on the front which reads “guest”. I turn around and see there is another door on the left of the landing. I feel like I'm being watched. I turn to the right and see an open door with complete darkness inside. I squint to try and see better. The door slams shut violently. I grip hold of the banister as a cold fear runs across my body."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
           "decision": "Guest Door",
@@ -64,7 +62,6 @@
         "I find myself in a dark corridor running perpendicularly with red wallpaper and wooden floors, faintly lit by gas lamps. There is a large window to my right. I try to open it, but it’s locked and pitch-black outside.",
         "The corridor has two doors off to the right and then proceeds round to the left. The doors are made from a dark wood and have bronze handles. I can feel a breeze and hear the whistling of the wind coming from under the first door. "
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
           "decision": "1st Door",
@@ -87,7 +84,6 @@
         "I find myself in a dark corridor running perpendicularly with red wallpaper and wooden floors, faintly lit by gas lamps. There is a large window to my left. I try to open it, but it’s locked and pitch-black outside.",
         "This corridor has two doors. One stands in front of me and the other is to the right. In the dimly lit distance the corridor seems to turn to the right. The doors are made from a dark wood and have bronze handles. The second door is slightly ajar, and I can hear a faint whimpering coming through it. It sends a shiver down my spine. I'm not sure I want to find out what that is."
       ],
-      "jumpscare": false,
 
       "userOptions": {
         "option1": {
@@ -111,7 +107,6 @@
         "I grab hold of the door handle and turn and it opens inwards. I find myself in some sort of dining room. There is a table in the middle of the room with two places set. There are windows on the left and opposite wall and a door on the right.",
         "I move around the table to try to windows but again they are locked. I look back to the table and feel a cold shiver run down my spine as I notice that there is place name in front of one of the seats. My name. I need to get out of here as soon as possible."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
           "decision": "Side Door",
@@ -130,7 +125,6 @@
         "I rush into the room and realise that the faint whimpering I heard earlier is louder and from behind a door in the far corner. I take a moment to consider where I am and realise I am in the kitchen. There are pots and pans all over the surfaces; all of which look like they have never been cleaned",
         "Next to the door in the corner is a window. I rush to it to try and open it but again have no luck. I feel a cold liquid seeping into my shoes like I have stepped in a puddle and look down to see my right foot is in what appears to be a pool of blood. The blood seemed to be coming from behind the door."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
           "decision": "Small Bathroom",
@@ -145,11 +139,11 @@
         "I nervously push open the corner door and find myself in a small bathroom. I gasp as I notice the entire floor is covered in blood. Opposite me is a half length mirror above a scaly sink with one of the taps dripping. To the left is a toilet covered in scum but it’s a dead end.",
         "There’s nothing else here and the only way out is the way I came. The whimpering I could hear in the previous room is gone and I realize my mind must have been playing tricks on me."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
           "decision": "Return to previous room",
-          "nextSlide": 16
+          "nextSlide": 16,
+          "action": "death"
         }
       }
     },
@@ -160,7 +154,6 @@
         "As I turn to go back into the kitchen, I once again hear the same whimpering noise but coming from directly behind me in the bathroom. I turn around as fast as I can. Standing infront of me is small girl with long black hair. I take a step backwards terrified and bump into the door. I'm trapped. She slowly starts to move her gaze upwards. I try to open the door frantically but it's locked. I look at her again and we make eye contact. I scream as all the life is sucked out of me.",
         "You are DEAD!!! RIP"
       ],
-      "jumpscare": true,
       "userOptions": {
         "option1": {
           "decision": "Return to beginning",
@@ -176,19 +169,16 @@
         "Then I notice it. There is a big sliding window behind the tv set with thick dusty curtains set apart. The window is open and the curtains are moving with the breeze. My heart starts thumping as I made my way towards the window. I’m finally getting out of here.",
         "A noise behind me. I freeze in my spot and slowly turn back to see a grizzled and misshapen man asleep and snoring in the left armchair. He is wearing dungarees and a baseball cap and his one eye is closed. The other is missing entirely and is an empty socket. On his waistband is a big iron key. I am about 3 metres from the window and the same from him."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
-          "decision": "Do I attempt to take the key and tiptoe back out of the room? Hard puzzle!",
-          "nextSlide": 16
+          "decision": "Take the key and leave the room!",
+          "nextSlide": 6,
+          "action": "key"
         },
         "option2": {
           "decision": "Do I tiptoe to the window and try and climb out?",
-          "nextSlide": 38
-        },
-        "option3": {
-          "decision": "Do I tiptoe back out of the room? Puzzle ",
-          "nextSlide": 6
+          "nextSlide": 50,
+          "action": "puzzle"
         }
       }
     },
@@ -200,15 +190,11 @@
         "I try with all my might but I cannot move the chair even slightly. I look at it, bemused, trying to work out what is holding it down but there appears to be nothing. I try one last time and put both of my hand on the back of the chair and heave. Nothing. All of a sudden the books shelves behind me start shaking. I turn and look at them and they start shaking even more.",
         "From the middle shelf an arm starts to come from between two of the books and reaches towards me. I stumble backwards and fall over the chair."
       ],
-      "jumpscare": false,
       "userOptions": {
-        "option1": {
-          "decision": "Puzzle/game",
-          "nextSlide": 36
-        },
         "option2": {
           "decision": "Get up and run",
-          "nextSlide": 44
+          "nextSlide": 44,
+          "action": "death"
         }
       }
     },
@@ -218,7 +204,6 @@
       "page2": [
         "I move to the end of the corridor and follow it around the bend. I can see the corridor continues around the other side of the house. However halfway down the corridor is a sheet metal door with a large catch. It looks as if it might lead to a basement."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
           "decision": "Go to corridor left",
@@ -240,11 +225,11 @@
       "page2": [
         "I use all my strength to open the large metal door and slip inside. I’m faced with wooden steps leading down into a basement. There’s a large gap between the first step and the next step with the ones in between all broken. There’s a flickering light at the bottom of the stairs but its virtually impossible to see."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
           "decision": "Continue forward?",
-          "nextSlide": 32
+          "nextSlide": 32,
+          "action": "keycheck"
         },
         "option2": {
           "decision": "Retrace steps?",
@@ -265,15 +250,15 @@
         "“To leave, you must leave”.",
         "What the hell does that mean. I pick up the cleaver and start banging at the clasp holding my left wrist. Nothing is working. 4:02, 4:01, 4:00. “Arghhhh” I explain as the next clasp tightens and starts to constrict my breathing."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
           "decision": "Try and break the clasp with the cleaver",
-          "nextSlide": 40
+          "nextSlide": 40,
+          "action": "death"
         },
         "option2": {
-          "decision": "Cut off left hand. Take cleaver",
-          "nextSlide": 50
+          "decision": "Cut off left hand and take cleaver",
+          "nextSlide": 46
         }
       }
     },
@@ -283,7 +268,6 @@
       "page2": [
         "I slowly push open the door that I’ve just seen slam shut. Why do I choose to go this way. No way. Is that my old friend? I peak through a crack in the door and can see a middle aged women with long straight brown hair sitting in front of a dressing table. She’s wearing a long white and wore out dress and is looking into the mirror brushing her hair. I open the door a little wider to get a better view. It’s definitely my friend but what the hell are they doing in this house. I need to get out."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
           "decision": "Go into the bedroom and speak to your old friend",
@@ -298,19 +282,15 @@
         "I open the door gradually and find myself in a huge bedroom. There’s a dusty bed with dark brown bedding in the centre of the room with a closet opposite and a chest of draws in the corner. Across the bed on the opposite side of the room are double doors with glass panes leading out onto a balcony.",
         "I run to the doors. They’re open. I swing one back and take a step forward and I feel someone grab the back of my clothes and pull me back in. It’s the grizzled one-eyed man wearing dungarees with patches of hair on his head."
       ],
-      "jumpscare": false,
       "userOptions": {
-        "option1": {
-          "decision": "(If with cleaver) Fight",
-          "nextSlide": 50
-        },
         "option2": {
           "decision": "Run",
           "nextSlide": 4
         },
         "option3": {
           "decision": "Fight without cleaver ",
-          "nextSlide": 16
+          "nextSlide": 16,
+          "action": "death"
         }
       }
     },
@@ -322,15 +302,15 @@
         "I stagger to my feet and look around. I can barely see anything but there are 2 lamps which are illuminating a couple of areas. The first appears to be some kind of cage. I step closing to it and see that it’s around 3 foot tall and 6 feet wide but it’s empty. The other area I can see appears to be some kind of trap door with a large metal padlock attached. I go to the padlock and try and force it off but its too strong.. There must be a key somewhere but how am I going to get out of here.",
         "Something growls in the dark and I turn and see you bright orange eyes staring at me from the darkness."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
-          "decision": "(If possessed) Use key to escape under pressure",
+          "decision": "Use key to escape under pressure",
           "nextSlide": 36
         },
         "option2": {
           "decision": "Attempt escape without key",
-          "nextSlide": 42
+          "nextSlide": 42,
+          "action": "death"
         }
       }
     },
@@ -340,7 +320,19 @@
       "page2": [
         "I take one step into the room and she stops brushing her hair. Her head starts turning to the right and keeps rotating all the way to look at me on the left. Her eyes are pitch black. He mouth appears to fall 3 inches and she vanishes. I turn to run but she’s standing in front of me, her hand is pushed into my chest and I’m bleeding heavily. RIP you are dead"
       ],
-      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Play Again?",
+          "nextSlide": 2
+        }
+      }
+    },
+    "win": {
+      "name": "You Have Escaped!",
+      "slide": 36,
+      "page2": [
+        "You Have Won!"
+      ],
       "userOptions": {
         "option1": {
           "decision": "Play Again?",
@@ -355,7 +347,6 @@
         "I tiptoe to the window and puts my hands on the windowsill readying myself to jump when I hear the loud whirring of a chainsaw. I cough and blood pours out of my mouth. I look down and see the top off a chainsaw protruding out of my stomach. My vision goes blurry.", 
         "RIP. You are dead"
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
           "decision": "Play Again?",
@@ -370,7 +361,6 @@
         "I try with all my might to break the clasp around my wrist as the clasp around my neck gets tighter and tighter. I can see the red countdown clock slowly ticking down. It counts down from 10 as my windpipe closes and I gasp my last breath",
         "RIP. You are dead."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
           "decision": "Play Again?",
@@ -385,7 +375,6 @@
         "I put my hands on the thick iron lock and realise that there is nothing I can do. The beast is blocking my way backwards and this lock is blocking my way forwards. A tear runs down my face as I fall to my knees resigned to the fact that this is the end. The beast starts to run towards me and I shut my eyes.",
         "RIP. You are dead."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
           "decision": "Play Again?",
@@ -400,7 +389,6 @@
         "I try to get up and run but I can't. A fear has gripped me like nothing I've felt before. From the bookcase, a ghoulish face appears and my heart stops. This is the end.",
         "RIP. You are dead."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
           "decision": "Play Again?",
@@ -408,17 +396,21 @@
         }
       }
     },
-    "win": {
-      "name": "You Have Escaped!",
-      "slide": 36,
+    "cleaverFight": {
+      "name": "Bedroom 2",
+      "slide": 46,
       "page2": [
-        "You Have Won!"
+        "I open the door to the next room and find myself in a huge bedroom. There’s a dusty bed with dark brown bedding in the centre of the room with a closet opposite and a chest of draws in the corner. Across the bed on the opposite side of the room are double doors with glass panes leading out onto a balcony.",
+        "I run to the doors. They’re open. I swing one back and take a step forward and I feel someone grab the back of my clothes and pull me back in. It’s the grizzled one-eyed man wearing dungarees with patches of hair on his head."
       ],
-      "jumpscare": false,
       "userOptions": {
         "option1": {
-          "decision": "Play Again?",
-          "nextSlide": 2
+          "decision": "Run",
+          "nextSlide": 4
+        },
+        "option2": {
+          "decision": "Fight with the cleaver",
+          "nextSlide": 36
         }
       }
     }
