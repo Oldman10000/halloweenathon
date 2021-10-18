@@ -220,7 +220,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       function deathAnimation(i) {
         console.log('dfdfjsdkfjaskdjfadjf')
-        document.querySelector("#scream").play();
+        if (!song.paused){
+          document.querySelector("#scream").play();
+        }
         if (i == 16) {
           randomNumber = Math.floor(Math.random() * 3) + 1;
           if (randomNumber == 1) {
