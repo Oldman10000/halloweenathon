@@ -177,8 +177,8 @@
         },
         "option2": {
           "decision": "Do I tiptoe to the window and try and climb out?",
-          "nextSlide": 50,
-          "action": "puzzle"
+          "nextSlide": 38,
+          "action": "death"
         }
       }
     },
@@ -271,7 +271,8 @@
       "userOptions": {
         "option1": {
           "decision": "Go into the bedroom and speak to your old friend",
-          "nextSlide": 34
+          "nextSlide": 34,
+          "action": "death"
         }
       }
     },
