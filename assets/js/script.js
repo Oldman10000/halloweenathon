@@ -71,13 +71,13 @@ function bloodDeath() {
 }
 
 // -----------win escape animation ----------
-const escapePicture = document.querySelector('.the-escape-picture')
-const escapeAnimation = document.querySelector('.escape-animation')
+const escapePicture = document.querySelector(".the-escape-picture");
+const escapeAnimation = document.querySelector(".escape-animation");
 
 function escape() {
-    gsap.to(escapeAnimation, {display:'block', duration: 1})  
-    gsap.to(escapePicture, {duration: 3, scale:15,y:300 })   
-    gsap.to(escapeAnimation, {display:'none', duration:1, delay:4} )
+  gsap.to(escapeAnimation, { display: "block", duration: 1 });
+  gsap.to(escapePicture, { duration: 3, scale: 15, y: 300 });
+  gsap.to(escapeAnimation, { display: "none", duration: 1, delay: 4 });
 }
 // ----end animations
 
@@ -145,8 +145,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return buttons
           .map((button) => {
-            console.log(button);
-            return `<button class="slide${Object.values(button[1])[1]}" data-slide="${Object.values(button[1])[1]}">${
+            return `<button class="slide${
+              Object.values(button[1])[1]
+            }" data-slide="${Object.values(button[1])[1]}">${
               Object.values(button[1])[0]
             }</button>`;
           })
@@ -218,15 +219,17 @@ document.addEventListener("DOMContentLoaded", function () {
       pageCount = pageFlip.getPageCount() + 1;
 
       function deathAnimation(i) {
+        console.log('dfdfjsdkfjaskdjfadjf')
+        if (!song.paused){
+          document.querySelector("#scream").play();
+        }
         if (i == 16) {
           randomNumber = Math.floor(Math.random() * 3) + 1;
           if (randomNumber == 1) {
             spiderDeath();
-          }
-          if (randomNumber == 2) {
+          } else if (randomNumber == 2) {
             screamDeath();
-          }
-          if (randomNumber == 3) {
+          } else {
             bloodDeath();
           }
         }
@@ -263,11 +266,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // allows user to flip to chosen page using the classname
       for (let i = 1; i < 51; i++) {
-        console.log(i);
         if (document.querySelector(`.slide${i}`)) {
           document.querySelectorAll(`.slide${i}`).forEach((button) =>
             button.addEventListener("click", (e) => {
-              console.log(e);
               runDiceGame(i, e);
             })
           );
