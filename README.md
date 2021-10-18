@@ -142,9 +142,16 @@ A spooky sound track can be enabled by clicking the button in the top left.
 
 - Each developer on the team has had the horrifying experience of clicking through all of the pages and all of the rooms.
 
+The following websites were used to check the code;
+
+W3C Validator - used to validate HTML file
+W3C Validator - used to validate CSS file
+JS Lint - used to check JavaScript file
+
 ## Bugs :cockroach:
 
 ## Credits
 
 - [StPageFlip JavaScript Library](https://github.com/Nodlik/StPageFlip) - created by [Nodlik](https://github.com/Nodlik) - Used for page flip animations
 - [Pexels.com](https://www.pexels.com/) - clipart style book images taken from various authors - specific credits not requested
+- Rian, Patrick, Slava, Laure, Craig and Josh 
