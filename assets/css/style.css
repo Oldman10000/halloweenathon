@@ -73,24 +73,23 @@ p {
   text-shadow: -1px 1px rgb(59, 29, 29);
   text-align: center;
   color: black;
-  text-decoration: underline;
-  text-underline-position: under;
+  margin: 10px 0;
 }
 
 .page .page-content .page-text {
   height: 100%;
   flex-grow: 1;
-  font-size: 80%;
   text-align: justify;
-  margin-top: 10px;
-  padding-top: 10px;
   box-sizing: border-box;
   /*border-top: solid 1px #f4e8d7;*/
   color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .page-text > p {
-  font-size: 1.25em;
+  font-size: 0.9em;
   text-align: center;
   padding: 0 25px;
   font-weight: bolder;
