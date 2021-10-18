@@ -20,9 +20,20 @@ p {
   font-family: 'ZCOOL KuaiLe', cursive;
 }
 
+.container .to-hide{
+  visibility: hidden;
+}
+
 .page {
   padding: 20px;
   overflow: hidden;
+  overflow-y: visible;
+}
+
+.music {
+  position: absolute;
+  top: 0;
+  z-index: 8;
 }
 
 .page .page-content {
@@ -59,25 +70,26 @@ p {
   font-family: 'Creepster', cursive;
   font-size: 2.5em;
   letter-spacing: 3px;
-  text-shadow: -4px 3px rgb(59, 29, 29);
+  text-shadow: -1px 1px rgb(59, 29, 29);
   text-align: center;
   color: black;
+  margin: 10px 0;
 }
 
 .page .page-content .page-text {
   height: 100%;
   flex-grow: 1;
-  font-size: 80%;
   text-align: justify;
-  margin-top: 10px;
-  padding-top: 10px;
   box-sizing: border-box;
-  border-top: solid 1px #f4e8d7;
+  /*border-top: solid 1px #f4e8d7;*/
   color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .page-text > p {
-  font-size: 1.25em;
+  font-size: 0.9em;
   text-align: center;
   padding: 0 25px;
   font-weight: bolder;
@@ -94,7 +106,7 @@ button {
 
 .buttons button {
   padding: 5px 20px;
-  margin: 0 3px 0 3px;
+  margin: 0 3px 7px 3px;
   border-radius: 0.5vh;
   border: none;
   background-color: rgb(144,114,59);
@@ -188,8 +200,6 @@ button {
     font-size: 1.5em;
   }
 
-  
-  
   @keyframes typing {
     from {
       width: 0
@@ -362,6 +372,29 @@ top: 200px;
   position: absolute;
   top: 0;
 }
+
+/* ---- escape win -----*/
+.escape-animation {
+  display: none;
+     /*display: none;*/
+}
+.the-escape-picture {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 50px;
+  position: absolute;
+  top: 0;
+}
+.background-escape {
+  background-color: rgb(182, 229, 227);
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 /*------------ end animations ------------- */
 
 /*------------ Popup ------------- */
@@ -439,5 +472,44 @@ top: 200px;
   to {
       top: 0px;
       opacity: 1;
+/*------------ make it responsive ------------- */
+
+@media screen and (max-width: 1200px){
+  .no-display-medium-screen {
+    display: none;
+  }
+  .music {
+    top:10px
+  }
+  .page {
+    padding: 20px;
+    overflow: visible;
+    overflow-x: auto;
+  }
+
+  #book {
+    left:0;
+    transform: translate(0%, -50%);
+  }
+
+.page.page-cover.page-cover-top {
+  transform: translateX(-80%);
+  } 
+}/*end responsiv max-width: 1200px */
+
+/*responsive height*/
+@media screen and (max-height: 620px) {
+  #book {
+    transform: translate(-50%, -40%);
+  }
+}
+@media screen and (max-height: 430px) {
+  #book {
+    transform: translate(-50%, -30%);
+  }
+}
+@media screen and (max-height: 200px) {
+  #book {
+    transform: translate(-50%, -15%);
   }
 }

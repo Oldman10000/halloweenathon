@@ -6,7 +6,7 @@ Welcome to our spooky halloween hackathon interactive story book. Live as the ma
 
 ## UXD
 
-Goals
+### Goals
 
 The app is designed to keep a user stuck to their seat using equal parts of fear and fun. The goal was to create an interative choose your own path story book that drew on regular tropes within horror stories to create a story that would be scary for everyone. We also wanted the story to be fun and so have included challenges through-out the app. Additionally we wanted the story to be complicated enough with different paths to complete it so that there was some replay value.
 
@@ -25,6 +25,15 @@ Target Audience
 ## Structure
 
 We divided up a story into bit-size chunks which would each be on individual webpages which would represent each page of a book. We wanted interactivity through out which we planned to include everything from the clicking of a button to turn a page to completing certain tasks to advance the story. 
+
+### Story planning
+
+The location of the story was first set as a haunted house. This was then draw out to allow us to create the paths that the player would take. These were map out as shown below.
+
+![Image of ground floor map of haunted house](assets/img/groundfloor.JPG)
+![Image of first floor map of haunted house](assets/img/firstfloor.JPG)
+![Image of basement floor map of haunted house](assets/img/basement.JPG)
+![Image of player path of haunted house](assets/img/playerpath.png)
 
 ## Skeleton
 
@@ -48,13 +57,91 @@ In keeping with the structure of a book, all content is divided into two contain
 
 There is a background image of a tea-stain coloured old book used through-out as well as a page-turning optical effect to really emphasise that this story is being read from an old book and ensuring that the theme of halloween is never forgotten. The book is being read upon a wooder floor or table. This is another background image that is used throughout. Each room that you enter has an additional image representing it to give added visuals. Finally there are animations of spiders that will drop into view as your progress.
 
+### Media
+
+A spooky soundtrack is available but can be toggled. We recommend playing with the soundtrack as it adds to the atmosphere.
+
 ## Features
 
-### Front page.
+### Front Cover
 
+The home page shows the front cover of the haunted book as seen below. The words "Do you dare enter?" appear letter by letter when you enter the site. The background behind the book is a wooden floor image. 
+
+![Image of front cover of haunted book](assets/img/groundfloor.JPG)
+
+There is also a page counter in the top left.
+
+![Image of page counter](assets/img/currentpage.JPG)
+
+### Chapters
+
+With the exception of the first two pages, each double page has a spooky picture on the left, situational story text on the right with a decision below the text which the player must make. This can be seen below:
+
+![Image of standard page](assets/img/pageexample.JPG)
+
+### Animations
+
+Throughout the program, many spooky animations can be found. Some examples are below:
+
+The book has an animation to give the effect that the pages are actually turning
+
+A spider will fall from the top of the screen from time to time
+![Image of spider animation](assets/img/spider.JPG)
+
+A ghost will appear to the right of the screen
+![Image of ghost animation](assets/img/ghost.JPG)
+
+A skeleton will appear to the right of the screen
+![Image of skeleton animation](assets/img/skeleton.JPG)
+
+### Sound effects
+
+A spooky sound track can be enabled by clicking the button in the top left.
+
+### Languages Used:
+
+ 1. [HTML](https://en.wikipedia.org/wiki/HTML) 
+ - Markup language providing content and structure of website.
+
+ 2. [CSS](https://en.wikipedia.org/wiki/CSS) 
+ - Styling language providing website styles and appearance.
+
+ 3. [Javascript](https://en.wikipedia.org/wiki/Javascript)
+ - Animations and logic through-out the website
+ 
+ ### Frameworks, Libraries & Programs Used:
+
+    
+ 1. [GitPod](https://gitpod.io/)
+    - IDE (Integrated Development Environment), for writing, editing and saving code.
+
+ 2. [GitHub](https://github.com/) 
+    - Remote hosting platform and code  repository.
+
+ 3. [Balsamiq](https://balsamiq.com/):
+    - Balsamiq was used to create the initial designs for the pages on the site.
+ 
+ 4. [Google Fonts](https://fonts.google.com/):
+    - Google fonts were used to import both the Hachi Maru and Poppins fonts that are used on the site.
+
+5. [Pexels](https://www.pexels.com/search/puppies/) / [Unsplash](https://unsplash.com/)
+    - Copywrite free stock images used throughout website
+
+6. [Am I Responsive?](http://ami.responsivedesign.is/)
+    - Used to create 4 screen mock up image in Readme.
+
+7. [Google Developer Tools](https://developers.google.com/web/tools) - including Lighthouse
+    - Used to constantly test the code and give feedback. 
 
 ## Testing
+
+### Manual Testing
+
+- Each developer on the team has had the horrifying experience of clicking through all of the pages and all of the rooms.
 
 ## Bugs :cockroach:
 
 ## Credits
+
+- [StPageFlip JavaScript Library](https://github.com/Nodlik/StPageFlip) - created by [Nodlik](https://github.com/Nodlik) - Used for page flip animations
+- [Pexels.com](https://www.pexels.com/) - clipart style book images taken from various authors - specific credits not requested

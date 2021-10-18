@@ -15,23 +15,25 @@
 
 <body>
   <div class="container">
-    <div>
-      <button type="button" class="btn-prev">Previous page</button>
-      [<span class="page-current">1</span> of <span class="page-total">-</span>]
-      <button type="button" class="btn-next">Next page</button>
-    </div>
-
-    <div>
-      State: <i class="page-state">read</i>, orientation: <i class="page-orientation">landscape</i>
-    </div>
 
     <div class="music">
-      <p class="sound_text">Make it creepy</p>
+      <p class="sound_text no-display-medium-screen">Make it creepy</p>
       <img id="icon" src="assets\img\play.png" alt="">
     </div>
-
     <audio id="creepy_sound" src="assets/sound/sound.mp3"></audio>
+
+    <div class="to-hide">
+      <div>
+        <button type="button" class="btn-prev">Previous page</button>
+        [<span class="page-current">1</span> of <span class="page-total">-</span>]
+        <button type="button" class="btn-next">Next page</button>
+      </div>
+      <div>
+        State: <i class="page-state">read</i>, orientation: <i class="page-orientation">landscape</i>
+      </div>
+    </div>
   </div>
+
   <div class="grid">
     <div id="book" class="container">
       <div class="flip-book" id="horrorBook">
@@ -101,6 +103,11 @@
     <img class="hand-blood-picture" src="assets/img/animation/crime-hand.jpg"
       alt="Picture of the shape of and hand with blood on a wall">
   </div>
+    <!-------   Escape win animation  ------->
+    <div class="escape-animation">
+      <div class="background-escape"></div>
+      <img class="the-escape-picture" src="assets/img/animation/forest-escape.jpg" alt="">  
+    </div>
 
   <!--POP UP-->
   <!-- The Modal -->

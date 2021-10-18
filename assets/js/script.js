@@ -70,6 +70,15 @@ function bloodDeath() {
   gsap.to(handAnimation, { display: "none", duration: 1, delay: 7 });
 }
 
+// -----------win escape animation ----------
+const escapePicture = document.querySelector(".the-escape-picture");
+const escapeAnimation = document.querySelector(".escape-animation");
+
+function escape() {
+  gsap.to(escapeAnimation, { display: "block", duration: 1 });
+  gsap.to(escapePicture, { duration: 3, scale: 15, y: 300 });
+  gsap.to(escapeAnimation, { display: "none", duration: 1, delay: 4 });
+}
 // ----end animations
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -137,7 +146,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return buttons
           .map((button) => {
             console.log(button);
-            return `<button class="slide${Object.values(button[1])[1]}">${
+            return `<button class="slide${
+              Object.values(button[1])[1]
+            }" data-slide="${Object.values(button[1])[1]}">${
               Object.values(button[1])[0]
             }</button>`;
           })
@@ -208,8 +219,53 @@ document.addEventListener("DOMContentLoaded", function () {
       // gets pagecount
       pageCount = pageFlip.getPageCount() + 1;
 
+      function deathAnimation(i) {
+        if (i == 16) {
+          randomNumber = Math.floor(Math.random() * 3) + 1;
+          if (randomNumber == 1) {
+            spiderDeath();
+          }
+          if (randomNumber == 2) {
+            screamDeath();
+          }
+          if (randomNumber == 3) {
+            bloodDeath();
+          }
+        }
+      }
+
+      // dice game will run one click of certain buttons.
+      function runDiceGame(i, e) {
+        let target = e.target.dataset.slide;
+        console.log(target);
+        if (target != 50) {
+          console.log(i);
+          pageFlip.flip(i);
+          if (target == 16) {
+            deathAnimation(i);
+          }
+        } else if (target == 50) {
+          console.log(i, "dice");
+          diceRoll(i, 10, 4);
+        }
+      }
+
+      // run a dice roll based of variables added to function
+      function diceRoll(i, total, odds) {
+        let roll = Math.floor(Math.random() * total) + 1;
+        console.log(roll);
+        if (roll > odds) {
+          pageFlip.flip(4);
+        }
+        if (roll < odds) {
+          pageFlip.flip(16);
+          deathAnimation(i);
+        }
+      }
+
       // allows user to flip to chosen page using the classname
-      for (let i = 1; i < pageCount; i++) {
+      for (let i = 1; i < 51; i++) {
+        console.log(i);
         if (document.querySelector(`.slide${i}`)) {
           document.querySelectorAll(`.slide${i}`).forEach((button) =>
             button.addEventListener("click", () => {
