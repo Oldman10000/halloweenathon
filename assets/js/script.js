@@ -1,63 +1,73 @@
 //  animations
 // -----------Spider death ----------
-const bodySpider = document.querySelector('.body-spider')
-const leftLegs = document.querySelectorAll('.left-leg')
-const rightLegs = document.querySelectorAll('.right-leg')
-const babySpiders = document.querySelectorAll('.baby-spider')
-const allSpiderDeathAnimation = document.querySelector('.spider-death-animation')
-const blackBackground = document.querySelector('.black-background')
-const greyBackground = document.querySelector('.grey-background')
-const motherSpider = document.querySelector('.mother-spider')
+const bodySpider = document.querySelector(".body-spider");
+const leftLegs = document.querySelectorAll(".left-leg");
+const rightLegs = document.querySelectorAll(".right-leg");
+const babySpiders = document.querySelectorAll(".baby-spider");
+const allSpiderDeathAnimation = document.querySelector(
+  ".spider-death-animation"
+);
+const blackBackground = document.querySelector(".black-background");
+const greyBackground = document.querySelector(".grey-background");
+const motherSpider = document.querySelector(".mother-spider");
 
 function spiderDeath() {
+  rightLegs.forEach((rightLeg) => {
+    gsap.to(rightLeg, {
+      rotation: 20,
+      yoyo: true,
+      repeat: -1,
+      duration: "random(0.5,3)",
+    });
+  });
+  leftLegs.forEach((leftLeg) => {
+    gsap.to(leftLeg, {
+      rotation: -20,
+      yoyo: true,
+      repeat: -1,
+      duration: "random(0.5,3)",
+    });
+  });
 
-    rightLegs.forEach(rightLeg => {
-        gsap.to(rightLeg, {rotation:20, yoyo: true,repeat: -1, duration:"random(0.5,3)"})
-    })
-    leftLegs.forEach(leftLeg => {
-        gsap.to(leftLeg, {rotation:-20, yoyo: true,repeat: -1, duration:"random(0.5,3)"})
-    })
+  babySpiders.forEach((babySpider) => {
+    gsap.to(babySpider, {
+      y: "random(-400,400)",
+      x: "random(-400,400)",
+      duration: "random(1,4)",
+      opacity: 1,
+      repeat: -1,
+      repeatRefresh: true,
+      delay: "random(1,6)",
+    });
+  });
 
-    babySpiders.forEach(babySpider => {
-        gsap.to(babySpider, {
-            y:"random(-400,400)",
-            x:"random(-400,400)",
-            duration:"random(1,4)",
-            opacity:1,
-            repeat:-1, 
-            repeatRefresh:true, 
-            delay:"random(1,6)"
-        })
-    })
+  const TL = gsap.timeline();
 
-    const TL = gsap.timeline();
-   
-    TL
-    .to(allSpiderDeathAnimation, {display:'block', duration: 1,} )
-    .to(blackBackground, {opacity:0, duration: 4} )
-    .to(motherSpider, {duration: 2, scale:8, y:-1500})
-    .to(allSpiderDeathAnimation, {display:'none', duration: 1, delay:1} )
+  TL.to(allSpiderDeathAnimation, { display: "block", duration: 1 })
+    .to(blackBackground, { opacity: 0, duration: 4 })
+    .to(motherSpider, { duration: 2, scale: 8, y: -1500 })
+    .to(allSpiderDeathAnimation, { display: "none", duration: 1, delay: 1 });
 }
 
 // -----------Scream death ----------
-const screamPicture = document.querySelector('.the-scream-picture')
-const screamAnimation = document.querySelector('.scream-animation')
+const screamPicture = document.querySelector(".the-scream-picture");
+const screamAnimation = document.querySelector(".scream-animation");
 
 function screamDeath() {
-    gsap.to(screamAnimation, {display:'block', duration: 1})  
-    gsap.to(screamPicture, {duration: 3, scale:40, })   
-    gsap.to(screamAnimation, {display:'none', duration:1, delay:5} )
+  gsap.to(screamAnimation, { display: "block", duration: 1 });
+  gsap.to(screamPicture, { duration: 3, scale: 40 });
+  gsap.to(screamAnimation, { display: "none", duration: 1, delay: 5 });
 }
 
 // -----------blood death ----------
-const handPicture = document.querySelector('.hand-blood-picture')
-const handAnimation = document.querySelector('.blood-animation')
+const handPicture = document.querySelector(".hand-blood-picture");
+const handAnimation = document.querySelector(".blood-animation");
 
 function bloodDeath() {
-    gsap.to(handAnimation, {display:'block', duration: 1}) 
-    gsap.to(handPicture, {duration: 5, opacity:0.2,delay:1})  
-    gsap.to(handPicture, {duration: 5, opacity:1,delay:5}) 
-    gsap.to(handAnimation, {display:'none', duration:1, delay:7} )
+  gsap.to(handAnimation, { display: "block", duration: 1 });
+  gsap.to(handPicture, { duration: 5, opacity: 0.2, delay: 1 });
+  gsap.to(handPicture, { duration: 5, opacity: 1, delay: 5 });
+  gsap.to(handAnimation, { display: "none", duration: 1, delay: 7 });
 }
 
 // -----------win escape animation ----------
@@ -136,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return buttons
           .map((button) => {
             console.log(button);
-            return `<button class="slide${Object.values(button[1])[1]}">${
+            return `<button class="slide${Object.values(button[1])[1]}" data-slide="${Object.values(button[1])[1]}">${
               Object.values(button[1])[0]
             }</button>`;
           })
@@ -207,19 +217,58 @@ document.addEventListener("DOMContentLoaded", function () {
       // gets pagecount
       pageCount = pageFlip.getPageCount() + 1;
 
+      function deathAnimation(i) {
+        if (i == 16) {
+          randomNumber = Math.floor(Math.random() * 3) + 1;
+          if (randomNumber == 1) {
+            spiderDeath();
+          }
+          if (randomNumber == 2) {
+            screamDeath();
+          }
+          if (randomNumber == 3) {
+            bloodDeath();
+          }
+        }
+      }
+
+      // dice game will run one click of certain buttons.
+      function runDiceGame(i, e) {
+        let target = e.target.dataset.slide;
+        console.log(target);
+        if (target != 50) {
+          console.log(i);
+          pageFlip.flip(i);
+          if (target == 16) {
+            deathAnimation(i);
+          }
+        } else if (target == 50) {
+          console.log(i, "dice");
+          diceRoll(i, 10, 4);
+        }
+      }
+
+      // run a dice roll based of variables added to function
+      function diceRoll(i, total, odds) {
+        let roll = Math.floor(Math.random() * total) + 1;
+        console.log(roll);
+        if (roll > odds) {
+          pageFlip.flip(4);
+        }
+        if (roll < odds) {
+          pageFlip.flip(16);
+          deathAnimation(i);
+        }
+      }
+
       // allows user to flip to chosen page using the classname
-      for (let i = 1; i < pageCount; i++) {
+      for (let i = 1; i < 51; i++) {
+        console.log(i);
         if (document.querySelector(`.slide${i}`)) {
           document.querySelectorAll(`.slide${i}`).forEach((button) =>
-            button.addEventListener("click", () => {
-              pageFlip.flip(i);
-              if(i == 16) {
-                randomNumber = Math.floor(Math.random() * 3) + 1;
-                if(randomNumber == 1){spiderDeath()}
-                if(randomNumber == 2){screamDeath()}
-                if(randomNumber == 3){bloodDeath()}
-              }
-              if(i == 36){escape()}
+            button.addEventListener("click", (e) => {
+              console.log(e);
+              runDiceGame(i, e);
             })
           );
         }
