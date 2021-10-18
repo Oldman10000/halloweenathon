@@ -20,9 +20,20 @@ p {
   font-family: 'ZCOOL KuaiLe', cursive;
 }
 
+.container .to-hide{
+  visibility: hidden;
+}
+
 .page {
   padding: 20px;
   overflow: hidden;
+  overflow-y: visible;
+}
+
+.music {
+  position: absolute;
+  top: 0;
+  z-index: 8;
 }
 
 .page .page-content {
@@ -59,9 +70,11 @@ p {
   font-family: 'Creepster', cursive;
   font-size: 2.5em;
   letter-spacing: 3px;
-  text-shadow: -4px 3px rgb(59, 29, 29);
+  text-shadow: -1px 1px rgb(59, 29, 29);
   text-align: center;
   color: black;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .page .page-content .page-text {
@@ -72,7 +85,7 @@ p {
   margin-top: 10px;
   padding-top: 10px;
   box-sizing: border-box;
-  border-top: solid 1px #f4e8d7;
+  /*border-top: solid 1px #f4e8d7;*/
   color: black;
 }
 
@@ -94,7 +107,7 @@ button {
 
 .buttons button {
   padding: 5px 20px;
-  margin: 0 3px 0 3px;
+  margin: 0 3px 7px 3px;
   border-radius: 0.5vh;
   border: none;
   background-color: rgb(144,114,59);
@@ -188,8 +201,6 @@ button {
     font-size: 1.5em;
   }
 
-  
-  
   @keyframes typing {
     from {
       width: 0
@@ -206,7 +217,6 @@ button {
 .spider-animation {
   position: absolute;
 }
-
 .spider-animation .spider1 {
   transform: translateY(-300px);
   width: 50px;
@@ -214,7 +224,6 @@ button {
   left: 450px;
   top: 150px;
 }
-
 .spider-animation .thread1 {
   transform: translateY(-300px);
   width: 2px;
@@ -222,26 +231,22 @@ button {
   left: 474px;
   top: -400px;
 }
-
 /* skeleton animation */
 .skeleton-animation {
  opacity: 0; 
 }
-
 .skeleton-animation .skeleton-head {
   position: absolute;
   width: 26px;
   left: 86px;
   top: 415px;
 }
-
 .skeleton-animation .skeleton-body {
   position: absolute;
   width: 140px;
   left: 10px;
   top: 400px;
 }
-
 /* ghost animation */
 .ghost-animation .ghost {
   opacity: 0;
@@ -250,5 +255,164 @@ button {
   right: 10px;
   top: 100px;
 }
-
+/* ----Spide death -----*/
+.spider-death-animation {
+  display: none;
+}
+.black-background {
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.grey-background {
+  background-color: rgb(87, 84, 84);
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.body-spider {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  /*opacity: 0; */ 
+  width: 150px;
+  position: absolute;
+  top: 200px;
+}
+.leg {
+/*opacity: 0; */ 
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+width: 150px;
+position: absolute;
+top: 200px;
+}
+.left-leg:nth-child(1){
+  right: -150px;
+  top: 225px;
+}
+.left-leg:nth-child(2){
+  right: -150px;
+  top: 205px;
+}
+.left-leg:nth-child(3){
+  right: -150px;
+  top: 180px;
+}
+.right-leg:nth-child(1) {
+  left: -150px;
+  top: 225px;
+}
+.right-leg:nth-child(2){
+  left: -150px;
+  top: 205px;
+}
+.right-leg:nth-child(3){
+  left: -150px;
+  top: 180px;
+}
+.baby-spider {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 50px;
+  position: absolute;
+  top: 205px;
+}
+/* ----Scream death -----*/
+.scream-animation{
+  display: none;
+     /*display: none;*/
+}
+.the-scream-picture {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 50px;
+  position: absolute;
+  top: 0;
+}
+.background-scream{
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* ----blood  death -----*/
+.blood-animation {
+  display: none;
+     /*display: none;*/
+}
+.background-blood {
+  background-image: url("../img/animation/wall-background.jpg");
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hand-blood-picture {
+  opacity: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
 /*------------ end animations ------------- */
+
+/*------------ make it responsive ------------- */
+
+@media screen and (max-width: 1200px){
+  .no-display-medium-screen {
+    display: none;
+  }
+  .music {
+    top:10px
+  }
+  .page {
+    padding: 20px;
+    overflow: visible;
+    overflow-x: auto;
+  }
+
+  #book {
+    left:0;
+    transform: translate(0%, -50%);
+  }
+
+.page.page-cover.page-cover-top {
+  transform: translateX(-80%);
+  } 
+}/*end responsiv max-width: 1200px */
+
+/*responsive height*/
+@media screen and (max-height: 620px) {
+  #book {
+    transform: translate(-50%, -40%);
+  }
+}
+@media screen and (max-height: 430px) {
+  #book {
+    transform: translate(-50%, -30%);
+  }
+}
+@media screen and (max-height: 200px) {
+  #book {
+    transform: translate(-50%, -15%);
+  }
+}
