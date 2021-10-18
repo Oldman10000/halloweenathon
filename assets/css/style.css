@@ -21,7 +21,8 @@ p {
 }
 
 .container .to-hide{
-  visibility: hidden;
+  /* visibility: hidden; */
+  z-index: 0;
 }
 
 .page {
@@ -472,44 +473,5 @@ top: 200px;
   to {
       top: 0px;
       opacity: 1;
-/*------------ make it responsive ------------- */
-
-@media screen and (max-width: 1200px){
-  .no-display-medium-screen {
-    display: none;
-  }
-  .music {
-    top:10px
-  }
-  .page {
-    padding: 20px;
-    overflow: visible;
-    overflow-x: auto;
-  }
-
-  #book {
-    left:0;
-    transform: translate(0%, -50%);
-  }
-
-.page.page-cover.page-cover-top {
-  transform: translateX(-80%);
-  } 
-}/*end responsiv max-width: 1200px */
-
-/*responsive height*/
-@media screen and (max-height: 620px) {
-  #book {
-    transform: translate(-50%, -40%);
-  }
-}
-@media screen and (max-height: 430px) {
-  #book {
-    transform: translate(-50%, -30%);
-  }
-}
-@media screen and (max-height: 200px) {
-  #book {
-    transform: translate(-50%, -15%);
   }
 }

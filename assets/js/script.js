@@ -147,9 +147,9 @@ document.addEventListener("DOMContentLoaded", function () {
           .map((button) => {
             return `<button class="slide${
               Object.values(button[1])[1]
-            }" data-slide="${Object.values(button[1])[1]}">${
-              Object.values(button[1])[0]
-            }</button>`;
+            }" data-slide="${Object.values(button[1])[1]}" data-action="${
+              Object.values(button[1])[2]
+            }">${Object.values(button[1])[0]}</button>`;
           })
           .join("");
       }
@@ -218,49 +218,67 @@ document.addEventListener("DOMContentLoaded", function () {
       // gets pagecount
       pageCount = pageFlip.getPageCount() + 1;
 
-      function deathAnimation(i) {
-        console.log('dfdfjsdkfjaskdjfadjf')
-        if (!song.paused){
+      function deathAnimation() {
+        if (!song.paused) {
           document.querySelector("#scream").play();
         }
-        if (i == 16) {
-          randomNumber = Math.floor(Math.random() * 3) + 1;
-          if (randomNumber == 1) {
-            spiderDeath();
-          } else if (randomNumber == 2) {
-            screamDeath();
-          } else {
-            bloodDeath();
-          }
+        randomNumber = Math.floor(Math.random() * 3) + 1;
+        if (randomNumber == 1) {
+          spiderDeath();
+        } else if (randomNumber == 2) {
+          screamDeath();
+        } else {
+          bloodDeath();
         }
       }
 
+      // set initial key value
+      haveKey = false;
+
       // dice game will run one click of certain buttons.
       function runDiceGame(i, e) {
-        let target = e.target.dataset.slide;
-        console.log(target);
-        if (target != 50) {
+        let slide = e.target.dataset.slide;
+        let death;
+        let puzzle;
+        if (e.target.dataset.action == "death"){
+          death = e.target.dataset.action;
+        } else if (e.target.dataset.action == "puzzle")  {
+          puzzle = e.target.dataset.action;
+        } else if (e.target.dataset.action == "key") {
+          // sets this to true once key has been taken
+          haveKey = true;
+        } else if (e.target.dataset.action =="keycheck") {
+          console.log(document.querySelector(".slide36"), haveKey);
+          // checks if key exists
+          if (!haveKey) {
+            // if no key then hide this button
+            document.querySelector(".slide36").style.display = "none";
+          }
+        }
+
+        console.log(slide);
+        if (!puzzle) {
           console.log(i);
           pageFlip.flip(i);
-          if (target == 16) {
-            deathAnimation(i);
+          if (death) {
+            deathAnimation();
           }
-        } else if (target == 50) {
+        } else {
           console.log(i, "dice");
           diceRoll(i, 10, 4);
         }
       }
 
       // run a dice roll based of variables added to function
-      function diceRoll(i, total, odds) {
+      function diceRoll(total, odds) {
         let roll = Math.floor(Math.random() * total) + 1;
         console.log(roll);
         if (roll > odds) {
-          pageFlip.flip(4);
+          pageFlip.flip(36);
         }
         if (roll < odds) {
-          pageFlip.flip(16);
-          deathAnimation(i);
+          pageFlip.flip(i);
+          deathAnimation();
         }
       }
 
