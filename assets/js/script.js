@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // minHeight: 420,
     // maxHeight: 1350,
 
-    usePortrait: true, // prevents only one page being viewed at a time
+    usePortrait: false, // prevents only one page being viewed at a time
     flippingTime: 1500, // time to flip book
     maxShadowOpacity: 0.5, // Half shadow intensity
     showCover: true, // show book cover
@@ -145,7 +145,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return buttons
           .map((button) => {
-            console.log(button);
             return `<button class="slide${
               Object.values(button[1])[1]
             }" data-slide="${Object.values(button[1])[1]}">${
@@ -220,15 +219,15 @@ document.addEventListener("DOMContentLoaded", function () {
       pageCount = pageFlip.getPageCount() + 1;
 
       function deathAnimation(i) {
+        console.log('dfdfjsdkfjaskdjfadjf')
+        document.querySelector("#scream").play();
         if (i == 16) {
           randomNumber = Math.floor(Math.random() * 3) + 1;
           if (randomNumber == 1) {
             spiderDeath();
-          }
-          if (randomNumber == 2) {
+          } else if (randomNumber == 2) {
             screamDeath();
-          }
-          if (randomNumber == 3) {
+          } else {
             bloodDeath();
           }
         }
@@ -265,23 +264,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // allows user to flip to chosen page using the classname
       for (let i = 1; i < 51; i++) {
-        console.log(i);
         if (document.querySelector(`.slide${i}`)) {
           document.querySelectorAll(`.slide${i}`).forEach((button) =>
-            button.addEventListener("click", () => {
-              pageFlip.flip(i);
-              if (i == 16) {
-                randomNumber = Math.floor(Math.random() * 3) + 1;
-                if (randomNumber == 1) {
-                  spiderDeath();
-                }
-                if (randomNumber == 2) {
-                  screamDeath();
-                }
-                if (randomNumber == 3) {
-                  bloodDeath();
-                }
-              }
+            button.addEventListener("click", (e) => {
+              runDiceGame(i, e);
             })
           );
         }
