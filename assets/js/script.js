@@ -106,18 +106,18 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch("./stories.json")
     .then((res) => res.json())
     .then((data) => {
-      console.log(data); // to see the json data in the console
-      document.querySelector(".cover-content h2").innerHTML = data.storyName; // test function
+      document.querySelector(".cover-content h2").innerHTML = data.storyName; // sets header in html
 
-      let page = 0; // set initial page value
-
+      // create variable for the storyparts
       const stories = Object.entries(data.storyParts);
 
       // checks if the story page 1 exists
       function checkPage1(story) {
         if (story.page1) {
+          // insert paragraph content
           return story.page1.map((p) => `<p>${p}</p>`).join("");
         } else {
+          // insert image
           return `
               <div class="page-img" style="background: transparent url(assets/img/page_img/${story.slide}.png) center no-repeat;">
               </div>
@@ -128,8 +128,10 @@ document.addEventListener("DOMContentLoaded", function () {
       // checks if the story page 2 exists
       function checkPage2(story) {
         if (story.page2) {
+          // insert paragraph content
           return story.page2.map((p) => `<p>${p}</p>`).join("");
         } else {
+          // insert image
           return `
             <div class="page-img">
               <img href="assets/img/page_img/${story.slide}.png">
@@ -139,10 +141,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      // checks buttons
+      // checks what buttons are needed
       function checkButtons(story) {
+        // gets buttons from the story variable
         const buttons = Object.entries(story.userOptions);
 
+        // inserts buttons needed with relevant class/data/content
         return buttons
           .map((button) => {
             return `<button class="slide${
@@ -154,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
           .join("");
       }
 
+      // renders content into html
       stories.forEach((story) => {
         story = story[1];
 
@@ -180,22 +185,28 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         `;
       });
+
+      // creates pageFlip object from html content
       pageFlip.loadFromHTML(document.querySelectorAll(".page"));
 
+      // adds page count to html for testing purposes
       document.querySelector(".page-total").innerText = pageFlip.getPageCount();
       document.querySelector(".page-orientation").innerText =
         pageFlip.getOrientation();
 
+      // allows user to open book from cover
       document
         .querySelector(".page-cover-top")
         .addEventListener("click", () => {
           pageFlip.flip(1);
         });
 
+      // flip to prev page for testing
       document.querySelector(".btn-prev").addEventListener("click", () => {
         pageFlip.flipPrev(); // Turn to the previous page (with animation)
       });
 
+      // flip to next page for testing
       document.querySelector(".btn-next").addEventListener("click", () => {
         pageFlip.flipNext(); // Turn to the next page (with animation)
       });
@@ -218,10 +229,13 @@ document.addEventListener("DOMContentLoaded", function () {
       // gets pagecount
       pageCount = pageFlip.getPageCount() + 1;
 
+      // creates animation that triggers on player death
       function deathAnimation() {
+        // plays sound if the sound is turned on
         if (!song.paused) {
           document.querySelector("#scream").play();
         }
+        // plays random death animation from 3options
         randomNumber = Math.floor(Math.random() * 3) + 1;
         if (randomNumber == 1) {
           spiderDeath();
@@ -233,22 +247,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // set initial key value
-      haveKey = false;
+      let haveKey = false;
 
       // dice game will run one click of certain buttons.
       function runDiceGame(i, e) {
-        let slide = e.target.dataset.slide;
         let death;
         let puzzle;
-        if (e.target.dataset.action == "death"){
+        if (e.target.dataset.action == "death") {
           death = e.target.dataset.action;
-        } else if (e.target.dataset.action == "puzzle")  {
+        } else if (e.target.dataset.action == "puzzle") {
           puzzle = e.target.dataset.action;
         } else if (e.target.dataset.action == "key") {
           // sets this to true once key has been taken
           haveKey = true;
-        } else if (e.target.dataset.action =="keycheck") {
-          console.log(document.querySelector(".slide36"), haveKey);
+        } else if (e.target.dataset.action == "keycheck") {
           // checks if key exists
           if (!haveKey) {
             // if no key then hide this button
@@ -256,15 +268,16 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
 
-        console.log(slide);
+        // checks if butotn pressed was a puzzle button
         if (!puzzle) {
-          console.log(i);
+          // just flip to necessary page
           pageFlip.flip(i);
           if (death) {
+            // if death button activate death anim
             deathAnimation();
           }
         } else {
-          console.log(i, "dice");
+          // activate diceroll on puzzle
           diceRoll(i, 10, 4);
         }
       }
@@ -272,7 +285,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // run a dice roll based of variables added to function
       function diceRoll(total, odds) {
         let roll = Math.floor(Math.random() * total) + 1;
-        console.log(roll);
         if (roll > odds) {
           pageFlip.flip(36);
         }
