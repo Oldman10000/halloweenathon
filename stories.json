@@ -295,7 +295,7 @@
         },
         "option3": {
           "decision": "Fight without cleaver ",
-          "nextSlide": 16,
+          "nextSlide": 48,
           "action": "death"
         }
       }
@@ -417,6 +417,33 @@
         "option2": {
           "decision": "Fight with the cleaver",
           "nextSlide": 36
+        }
+      }
+    },
+    "finalDeath": {
+      "name": "You are dead!",
+      "slide": 48,
+      "page2": [
+        "I try to overpower the grotesque man with a left and a right hook but each blow bounces off him without any reaction. He puts his hands around my neck. I continue flailing punches in his direction to no avail. I can't breath. I'm going to die.",
+        "RIP. You are dead."
+      ],
+      "userOptions": {
+        "option1": {
+          "decision": "Play Again?",
+          "nextSlide": 2
+        }
+      }
+    },
+    "returnLanding": {
+      "name": "You are dead!",
+      "slide": 50,
+      "page2": [
+        "I run as fast as I can straight back out the door onto the landing slamming the door shut behind me. I quickly run into the next room along"
+      ],
+      "userOptions": {
+        "option1": {
+          "decision": "Guest Door",
+          "nextSlide": 26
         }
       }
     }
