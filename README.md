@@ -1,4 +1,5 @@
 # :ghost: Halloweenathon :jack_o_lantern:
+[Live project here.](https://oldman10000.github.io/halloweenathon/)
 
 ## About :derelict_house:
 
@@ -69,9 +70,6 @@ The home page shows the front cover of the haunted book as seen below. The words
 
 ![Image of front cover of haunted book](assets/img/frontpage.JPG)
 
-There is also a page counter in the top left.
-
-![Image of page counter](assets/img/currentpage.JPG)
 
 ### Chapters
 
@@ -136,6 +134,9 @@ A spooky sound track can be enabled by clicking the button in the top left.
 8. [Favicon](https://favicon.io/):
     - Favicon used to implement a favicon on the browser tab.
 
+9. [GreenSock](https://greensock.com/):
+    - GreenSock used to implement animations.
+
 ## Testing
 
 ### Manual Testing
@@ -148,3 +149,4 @@ A spooky sound track can be enabled by clicking the button in the top left.
 
 - [StPageFlip JavaScript Library](https://github.com/Nodlik/StPageFlip) - created by [Nodlik](https://github.com/Nodlik) - Used for page flip animations
 - [Pexels.com](https://www.pexels.com/) - clipart style book images taken from various authors - specific credits not requested
+- [Pixabay](https://pixabay.com/) - Pictures taken from Pixabay were used in the animations
