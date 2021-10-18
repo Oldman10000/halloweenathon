@@ -129,7 +129,12 @@
         "option1": {
           "decision": "Small Bathroom",
           "nextSlide": 14
+        },
+        "option2": {
+          "decision": "Back To Corridor",
+          "nextSlide": 8
         }
+
       }
     },
     "toilet": {
@@ -177,7 +182,7 @@
         },
         "option2": {
           "decision": "Do I tiptoe to the window and try and climb out?",
-          "nextSlide": 50,
+          "nextSlide": 38,
           "action": "puzzle"
         }
       }
