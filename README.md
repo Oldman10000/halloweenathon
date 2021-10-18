@@ -67,7 +67,7 @@ A spooky soundtrack is available but can be toggled. We recommend playing with t
 
 The home page shows the front cover of the haunted book as seen below. The words "Do you dare enter?" appear letter by letter when you enter the site. The background behind the book is a wooden floor image. 
 
-![Image of front cover of haunted book](assets/img/groundfloor.JPG)
+![Image of front cover of haunted book](assets/img/frontpage.JPG)
 
 There is also a page counter in the top left.
 
@@ -132,6 +132,9 @@ A spooky sound track can be enabled by clicking the button in the top left.
 
 7. [Google Developer Tools](https://developers.google.com/web/tools) - including Lighthouse
     - Used to constantly test the code and give feedback. 
+
+8. [Favicon](https://favicon.io/):
+    - Favicon used to implement a favicon on the browser tab.
 
 ## Testing
 

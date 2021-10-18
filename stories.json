@@ -67,11 +67,11 @@
       "jumpscare": false,
       "userOptions": {
         "option1": {
-          "decision": "Lounge",
+          "decision": "1st Door",
           "nextSlide": 18
         },
         "option2": {
-          "decision": "Study",
+          "decision": "2nd Door",
           "nextSlide": 20
         },
         "option3": {
@@ -91,11 +91,11 @@
 
       "userOptions": {
         "option1": {
-          "decision": "Dining Room",
+          "decision": "1st Door",
           "nextSlide": 10
         },
         "option2": {
-          "decision": "Kitchen",
+          "decision": "2nd Door",
           "nextSlide": 12
         },
         "option3": {
@@ -179,12 +179,12 @@
       "jumpscare": false,
       "userOptions": {
         "option1": {
-          "decision": "Do I attempt to take the key? Hard puzzle!",
+          "decision": "Do I attempt to take the key and tiptoe back out of the room? Hard puzzle!",
           "nextSlide": 16
         },
         "option2": {
           "decision": "Do I tiptoe to the window and try and climb out?",
-          "nextSlide": 36
+          "nextSlide": 38
         },
         "option3": {
           "decision": "Do I tiptoe back out of the room? Puzzle ",
@@ -198,7 +198,7 @@
       "page2": [
         "I push the door open and go inside. It appears to be some kind of study with book shelves along all four walls and a desk in the middle of the room with a chair behind. “Wait a second” I think. I can use the chair to smash through a window. Buoyed by this idea, I move towards the chair. Its a wooden framed desk chair with a cushion sewn on. I grab it with both hands and try and lift it but it won’t move.",
         "I try with all my might but I cannot move the chair even slightly. I look at it, bemused, trying to work out what is holding it down but there appears to be nothing. I try one last time and put both of my hand on the back of the chair and heave. Nothing. All of a sudden the books shelves behind me start shaking. I turn and look at them and they start shaking even more.",
-        "From the middle shelf an arm starts to come from between two of the books and reaches towards me. I stumble backwards and fall over the chair. I get up and run towards the door."
+        "From the middle shelf an arm starts to come from between two of the books and reaches towards me. I stumble backwards and fall over the chair."
       ],
       "jumpscare": false,
       "userOptions": {
@@ -207,13 +207,13 @@
           "nextSlide": 36
         },
         "option2": {
-          "decision": "Fail and die",
-          "nextSlide": 16
+          "decision": "Get up and run",
+          "nextSlide": 44
         }
       }
     },
     "basementCorridor": {
-      "name": "Basement Corridor",
+      "name": "Rear Corridor",
       "slide": 22,
       "page2": [
         "I move to the end of the corridor and follow it around the bend. I can see the corridor continues around the other side of the house. However halfway down the corridor is a sheet metal door with a large catch. It looks as if it might lead to a basement."
@@ -222,11 +222,11 @@
       "userOptions": {
         "option1": {
           "decision": "Go to corridor left",
-          "nextSlide": 6
+          "nextSlide": 8
         },
         "option2": {
           "decision": "Go to corridor right",
-          "nextSlide": 8
+          "nextSlide": 6
         },
         "option3": {
           "decision": "Basement",
@@ -269,13 +269,9 @@
       "userOptions": {
         "option1": {
           "decision": "Try and break the clasp with the cleaver",
-          "nextSlide": 50
+          "nextSlide": 40
         },
         "option2": {
-          "decision": "Do nothing",
-          "nextSlide": 16
-        },
-        "option3": {
           "decision": "Cut off left hand. Take cleaver",
           "nextSlide": 50
         }
@@ -291,7 +287,7 @@
       "userOptions": {
         "option1": {
           "decision": "Go into the bedroom and speak to your old friend",
-          "nextSlide": 16
+          "nextSlide": 34
         }
       }
     },
@@ -333,31 +329,87 @@
           "nextSlide": 36
         },
         "option2": {
-          "decision": "Die",
-          "nextSlide": 16
+          "decision": "Attempt escape without key",
+          "nextSlide": 42
         }
       }
     },
-    "bedroomWithFriend": {
+    "friendDeath": {
       "name": "Bedroom with Friend",
       "slide": 34,
       "page2": [
-        "I take one step into the room and she stops brushing her hair. Her head starts turning to the right and keeps rotating all the way to look at me on the left. Her eyes are pitch black. He mouth appears to fall 3 inches and she vanishes. I turn to run but she’s standing in front of me, her hand is pushed into my chest and I’m bleeding heavily."
+        "I take one step into the room and she stops brushing her hair. Her head starts turning to the right and keeps rotating all the way to look at me on the left. Her eyes are pitch black. He mouth appears to fall 3 inches and she vanishes. I turn to run but she’s standing in front of me, her hand is pushed into my chest and I’m bleeding heavily. RIP you are dead"
       ],
       "jumpscare": false,
       "userOptions": {
         "option1": {
-          "decision": "Go into the bedroom and speak to your old friend",
-          "nextSlide": 16
-        },
-        "option2": {
-          "decision": "Do nothing",
-          "nextSlide": 32
+          "decision": "Play Again?",
+          "nextSlide": 2
+        }
+      }
+    },
+    "hillbillyDeath": {
+      "name": "Escape attempt",
+      "slide": 38,
+      "page2": [
+        "I tiptoe to the window and puts my hands on the windowsill readying myself to jump when I hear the loud whirring of a chainsaw. I cough and blood pours out of my mouth. I look down and see the top off a chainsaw protruding out of my stomach. My vision goes blurry.", 
+        "RIP. You are dead"
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Play Again?",
+          "nextSlide": 2
+        }
+      }
+    },
+    "sawDeath": {
+      "name": "You are dead!",
+      "slide": 40,
+      "page2": [
+        "I try with all my might to break the clasp around my wrist as the clasp around my neck gets tighter and tighter. I can see the red countdown clock slowly ticking down. It counts down from 10 as my windpipe closes and I gasp my last breath",
+        "RIP. You are dead."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Play Again?",
+          "nextSlide": 2
+        }
+      }
+    },
+    "basementDeath": {
+      "name": "You are dead!",
+      "slide": 42,
+      "page2": [
+        "I put my hands on the thick iron lock and realise that there is nothing I can do. The beast is blocking my way backwards and this lock is blocking my way forwards. A tear runs down my face as I fall to my knees resigned to the fact that this is the end. The beast starts to run towards me and I shut my eyes.",
+        "RIP. You are dead."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Play Again?",
+          "nextSlide": 2
+        }
+      }
+    },
+    "bookcaseDeath": {
+      "name": "You are dead!",
+      "slide": 44,
+      "page2": [
+        "I try to get up and run but I can't. A fear has gripped me like nothing I've felt before. From the bookcase, a ghoulish face appears and my heart stops. This is the end.",
+        "RIP. You are dead."
+      ],
+      "jumpscare": false,
+      "userOptions": {
+        "option1": {
+          "decision": "Play Again?",
+          "nextSlide": 2
         }
       }
     },
     "win": {
-      "name": "You Have Won",
+      "name": "You Have Escaped!",
       "slide": 36,
       "page2": [
         "You Have Won!"
