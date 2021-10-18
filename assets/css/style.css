@@ -397,6 +397,81 @@ top: 200px;
 }
 /*------------ end animations ------------- */
 
+/*------------ Popup ------------- */
+
+.modal {
+  display: none; 
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  z-index: 100; 
+  transform: translate(-50%, -50%);
+    
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  
+}
+
+.modal-text {
+  color:red;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  text-align: center;
+}
+
+.modal-head {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  color: black;
+  font-family: 'Creepster', cursive;;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal .modal-content {
+  padding: 20px 20px 20px 20px;
+  -webkit-animation-name: modal-animation;
+  -webkit-animation-duration: 0.5s;
+  animation-name: modal-animation;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes modal-animation {
+  from {
+      top: -100px;
+      opacity: 0;
+  }
+  to {
+      top: 0px;
+      opacity: 1;
+  }
+}
+
+@keyframes modal-animation {
+  from {
+      top: -100px;
+      opacity: 0;
+  }
+  to {
+      top: 0px;
+      opacity: 1;
 /*------------ make it responsive ------------- */
 
 @media screen and (max-width: 1200px){
