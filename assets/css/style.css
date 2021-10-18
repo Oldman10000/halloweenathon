@@ -20,9 +20,20 @@ p {
   font-family: 'ZCOOL KuaiLe', cursive;
 }
 
+.container .to-hide{
+  visibility: hidden;
+}
+
 .page {
   padding: 20px;
   overflow: hidden;
+  overflow-y: visible;
+}
+
+.music {
+  position: absolute;
+  top: 0;
+  z-index: 8;
 }
 
 .page .page-content {
@@ -59,9 +70,11 @@ p {
   font-family: 'Creepster', cursive;
   font-size: 2.5em;
   letter-spacing: 3px;
-  text-shadow: -4px 3px rgb(59, 29, 29);
+  text-shadow: -1px 1px rgb(59, 29, 29);
   text-align: center;
   color: black;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .page .page-content .page-text {
@@ -72,7 +85,7 @@ p {
   margin-top: 10px;
   padding-top: 10px;
   box-sizing: border-box;
-  border-top: solid 1px #f4e8d7;
+  /*border-top: solid 1px #f4e8d7;*/
   color: black;
 }
 
@@ -94,7 +107,7 @@ button {
 
 .buttons button {
   padding: 5px 20px;
-  margin: 0 3px 0 3px;
+  margin: 0 3px 7px 3px;
   border-radius: 0.5vh;
   border: none;
   background-color: rgb(144,114,59);
@@ -188,8 +201,6 @@ button {
     font-size: 1.5em;
   }
 
-  
-  
   @keyframes typing {
     from {
       width: 0
@@ -363,3 +374,45 @@ top: 200px;
   top: 0;
 }
 /*------------ end animations ------------- */
+
+/*------------ make it responsive ------------- */
+
+@media screen and (max-width: 1200px){
+  .no-display-medium-screen {
+    display: none;
+  }
+  .music {
+    top:10px
+  }
+  .page {
+    padding: 20px;
+    overflow: visible;
+    overflow-x: auto;
+  }
+
+  #book {
+    left:0;
+    transform: translate(0%, -50%);
+  }
+
+.page.page-cover.page-cover-top {
+  transform: translateX(-80%);
+  } 
+}/*end responsiv max-width: 1200px */
+
+/*responsive height*/
+@media screen and (max-height: 620px) {
+  #book {
+    transform: translate(-50%, -40%);
+  }
+}
+@media screen and (max-height: 430px) {
+  #book {
+    transform: translate(-50%, -30%);
+  }
+}
+@media screen and (max-height: 200px) {
+  #book {
+    transform: translate(-50%, -15%);
+  }
+}
