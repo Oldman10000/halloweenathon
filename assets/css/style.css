@@ -21,7 +21,7 @@ p {
 }
 
 .container .to-hide{
-  /* visibility: hidden; */
+  visibility: hidden;
   z-index: 0;
 }
 
